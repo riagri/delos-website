@@ -102,9 +102,9 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .dot { color: var(--pink); }
 .lede { font-size: clamp(19px, 2.2vw, 22px); line-height: 1.5; max-width: 38em; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 24px 0 8px; padding: 0; }
-.chips { gap: 6px 0; }
+.chips { gap: 6px 22px; }
 .chips li { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); line-height: 1.6; }
-.chips li + li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--pink); margin: 0 14px 2px; vertical-align: middle; }
+.chips li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--pink); margin: 0 10px 2px 0; vertical-align: middle; }
 .chips + p { margin-top: 32px; }
 .muted { color: var(--slate-500); }
 
@@ -173,6 +173,24 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .steps h3 { font-size: 26px; margin-bottom: 0.2em; }
 .steps p { margin: 0; }
 
+/* Myths */
+.myths { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--slate-200); }
+.myths li { padding: 28px 0; border-bottom: 1px solid var(--slate-200); display: grid; gap: 10px; }
+.myths p { margin: 0; }
+.myths .label { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; color: var(--slate-500); }
+.myth { font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); line-height: 1.15; color: var(--delos-blue); }
+.myth s { text-decoration-color: var(--pink); text-decoration-thickness: 2px; }
+.truth .label { color: var(--pink-700); }
+
+/* Quotes */
+.quotes { display: grid; gap: 40px; margin-top: 40px; }
+.quotes figure { margin: 0; padding-top: 24px; border-top: 1px solid var(--slate-200); }
+.quotes blockquote { margin: 0; font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 28px); line-height: 1.25; color: var(--delos-blue); }
+.quotes blockquote p { margin: 0 0 14px; }
+.quotes blockquote p::before { content: "\201C"; } .quotes blockquote p::after { content: "\201D"; }
+.quotes figcaption { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate-500); }
+.more-reviews { margin: 40px 0 0; }
+
 /* About */
 .about-grid { display: grid; gap: 40px; align-items: start; }
 .photo-placeholder {
@@ -207,6 +225,8 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   .section { padding: 104px 0; }
   .paths { grid-template-columns: 1fr 1fr; gap: 56px; }
   .paths .card { padding: 32px 0 0; }
+  .myths li { grid-template-columns: 1fr 1fr; gap: 56px; align-items: baseline; }
+  .quotes { grid-template-columns: 1fr 1fr; gap: 56px; }
   .site-header nav { width: auto; order: 1; margin-left: auto; }
   .header-cta { order: 2; margin-left: 8px; }
   .cover-list li { grid-template-columns: 260px 1fr; align-items: baseline; gap: 24px; }
