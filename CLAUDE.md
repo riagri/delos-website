@@ -16,22 +16,26 @@ Website for Delos Recruitment Ltd, a specialist recruitment-to-recruitment (rec2
 
 - Tagline: "Everything you have heard about recruitment is a myth"
 - Voice: confident but not boastful, warm but not fluffy, direct without being blunt. No buzzwords, no recruitment clichés, no corporate filler.
-- Colours: Delos Blue `#0053BF` (primary), Bougainvillea Bloom `#EC2193` (accent, use sparingly), Hellenic Slate `#1D1E21` (text), Ionian Pearl `#F9F9F9` (background).
+- Colours: Delos Blue `#0053BF` (primary), Bougainvillea Bloom `#EC2193` (accent, use sparingly; every pink on the site is exactly this "Delos pink", never a darker shade), Hellenic Slate `#1D1E21` (text), Ionian Pearl `#F9F9F9` (background).
 - Look: clean, editorial, fashion-magazine feel rather than corporate recruitment site. Generous type, strong headings, few boxes and icons.
 - Logo files are in `/assets`. Never use the D mark (or any faded or oversized mark) as a background or decoration. Backgrounds are single flat colours.
 - Headline font is Gloock (free, SIL Open Font Licence). Never use Erstoria.
 - Never use em dashes or en dashes in copy. UK English. No emoji, no exclamation marks.
+- Team voice: Delos speaks as "we" so it reads as more than one person. No "I", no personal "about Maria" section, no photos for now.
+- Speak directly to the reader ("you", "your business"). Hiring speaks to clients, Careers to candidates. About describes the business.
+- Stress thoroughness, never speed ("quick", "fast", "efficient").
+- Reviews: keep to two or three, quoted word for word, credited by role (for example "Candidate, Google review"), never by name.
 - Website copy comes only from Maria's own signed-off copy. Never use wording from the original brand book.
 
 ## Pages
 
 All copy is approved by Maria in the "Delos Website Copy" doc. Change wording only when she asks.
 
-1. **Home** (index.html): tagline, scope, Maria's opening line, two paths (Hiring, Careers), closing line.
-2. **Hiring** (hiring.html): for recruitment businesses hiring.
-3. **Careers** (careers.html): for people thinking about a move into recruitment.
-4. **About** (about.html): Maria's master copy, word for word. Add her photo when she sends one.
-5. **Contact** (contact.html): Calendly link, email and phone.
+1. **Home** (index.html): tagline with "myth." in pink, role labels, five myths (tap "Ask the oracle +" to reveal each truth, no JavaScript), Hiring and Careers paths, two reviews, closing line.
+2. **Hiring** (hiring.html): for recruitment businesses hiring. "How we work" in five steps, in Maria's words.
+3. **Careers** (careers.html): for people new to recruitment and experienced recruiters looking for their next move.
+4. **About** (about.html): the business in "we" voice. No personal section.
+5. **Contact** (contact.html): client and candidate booking buttons, Calendly inline embed, email and phone.
 6. **Privacy notice** (privacy.html): copied word for word from her Lawspeed privacy-notice.pdf.
 
 One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.xml, robots.txt and llms.txt support search and AI search.
@@ -40,8 +44,12 @@ One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.x
 
 - Email (public): hello@delosrecruitment.co.uk
 - Phone: +44 7537 142925
-- Book a call: https://calendly.com/maria-delosrecruitment (embed Calendly's inline widget on Contact, link buttons elsewhere)
-- Footer: Delos Recruitment Ltd, company number and registered address as `[MARIA TO CONFIRM]` placeholders, privacy policy link (placeholder page).
+- Book a call: https://calendly.com/maria-delosrecruitment (inline embed on Contact). Calendly is on the free plan, so there is one event type ("Initial Call"). Client and candidate buttons both use it, prefilling the first question:
+  - Client: https://calendly.com/maria-delosrecruitment/initial-call?a1=Client%20call
+  - Candidate: https://calendly.com/maria-delosrecruitment/initial-call?a1=Candidate%20call
+- Socials (footer logos, plain, pink on hover, no underlines): LinkedIn https://www.linkedin.com/in/mariagripari/, Instagram https://www.instagram.com/delosrecruitment, Facebook https://www.facebook.com/delosrecruitment, TikTok https://www.tiktok.com/@delosrecruitment, X https://x.com/delos_rec, Google reviews https://share.google/tXGXv0by0SHzzuIAu
+- Footer: logo, page links, email, phone, Book a call, social logos, privacy notice, "Delos Recruitment Ltd. Registered in England and Wales, company number 16163283." No tagline in the footer.
+- Header: "Book a call" button linking to Contact.
 
 ## Hosting
 
