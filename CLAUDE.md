@@ -35,7 +35,7 @@ All copy is approved by Maria in the "Delos Website Copy" doc. Change wording on
 2. **Hiring** (hiring.html): for recruitment businesses hiring. "How we work" in five steps, in Maria's words.
 3. **Careers** (careers.html): for people new to recruitment and experienced recruiters looking for their next move.
 4. **About** (about.html): the business in "we" voice. No personal section.
-5. **Contact** (contact.html): client and candidate booking buttons, Calendly inline embed, email and phone.
+5. **Contact** (contact.html): client and candidate booking buttons (no embedded calendar, so the site sets no cookies), email and phone.
 6. **Privacy notice** (privacy.html): copied word for word from her Lawspeed privacy-notice.pdf.
 
 One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.xml, robots.txt and llms.txt support search and AI search.
@@ -44,7 +44,7 @@ One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.x
 
 - Email (public): hello@delosrecruitment.co.uk
 - Phone: +44 7537 142925
-- Book a call: https://calendly.com/maria-delosrecruitment (inline embed on Contact). Calendly is on the free plan, so there is one event type ("Initial Call"). Client and candidate buttons both use it, prefilling the first question:
+- Book a call: https://calendly.com/maria-delosrecruitment. Link out only, never embed (an embed sets third-party cookies on our site, which would need a cookie consent banner). Calendly is on the free plan, so there is one event type ("Initial Call"). Client and candidate buttons both use it, prefilling the first question:
   - Client: https://calendly.com/maria-delosrecruitment/initial-call?a1=Client%20call
   - Candidate: https://calendly.com/maria-delosrecruitment/initial-call?a1=Candidate%20call
 - Socials (footer logos, plain, pink on hover, no underlines): LinkedIn https://www.linkedin.com/in/mariagripari/, Instagram https://www.instagram.com/delosrecruitment, Facebook https://www.facebook.com/delosrecruitment, TikTok https://www.tiktok.com/@delosrecruitment, X https://x.com/delos_rec, Google reviews https://share.google/tXGXv0by0SHzzuIAu
