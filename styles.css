@@ -173,14 +173,21 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .steps h3 { font-size: 26px; margin-bottom: 0.2em; }
 .steps p { margin: 0; }
 
-/* Myths */
+/* Myths: tap a myth to reveal the truth */
 .myths { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--slate-200); }
-.myths li { padding: 28px 0; border-bottom: 1px solid var(--slate-200); display: grid; gap: 10px; }
-.myths p { margin: 0; }
-.myths .label { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; color: var(--slate-500); }
-.myth { font-family: var(--font-display); font-size: clamp(24px, 3vw, 32px); line-height: 1.15; color: var(--delos-blue); }
-.myth s { text-decoration-color: var(--pink); text-decoration-thickness: 2px; }
-.truth .label { color: var(--pink-700); }
+.myths li { border-bottom: 1px solid var(--slate-200); }
+.myths summary { list-style: none; cursor: pointer; padding: 28px 0; display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; align-items: end; }
+.myths summary::-webkit-details-marker { display: none; }
+.myths .label { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate-500); grid-column: 1 / -1; }
+.myth { font-family: var(--font-display); font-size: clamp(24px, 3vw, 34px); line-height: 1.15; color: var(--delos-blue); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
+.myths details[open] .myth { text-decoration-color: var(--pink); }
+.reveal { font-size: 14px; font-weight: 500; color: var(--pink-700); white-space: nowrap; padding-bottom: 6px; }
+.reveal::after { content: "Reveal the truth +"; }
+.myths details[open] .reveal::after { content: "Hide"; }
+.myths summary:hover .reveal { text-decoration: underline; text-underline-offset: 3px; }
+.truth { margin: -8px 0 0; padding: 0 0 28px; font-size: clamp(19px, 2.2vw, 22px); line-height: 1.5; max-width: 38em; }
+.truth .label { color: var(--pink-700); margin-bottom: 6px; }
+@media (max-width: 559px) { .myths summary { grid-template-columns: 1fr; } .reveal { padding-bottom: 0; } }
 
 /* Quotes */
 .quotes { display: grid; gap: 40px; margin-top: 40px; }
@@ -225,7 +232,6 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   .section { padding: 104px 0; }
   .paths { grid-template-columns: 1fr 1fr; gap: 56px; }
   .paths .card { padding: 32px 0 0; }
-  .myths li { grid-template-columns: 1fr 1fr; gap: 56px; align-items: baseline; }
   .quotes { grid-template-columns: 1fr 1fr; gap: 56px; }
   .site-header nav { width: auto; order: 1; margin-left: auto; }
   .header-cta { order: 2; margin-left: 8px; }
