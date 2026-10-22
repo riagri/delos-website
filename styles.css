@@ -223,9 +223,9 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .site-footer a:hover { color: #F9B6DC; }
 .site-footer .logo img { height: 52px; margin-bottom: 20px; }
 .footer-grid { display: grid; gap: 28px; }
-.social { list-style: none; margin: 16px 0 0; padding: 0; display: flex; gap: 12px; }
-.social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(249, 249, 249, 0.4); color: var(--pearl); transition: background 200ms var(--ease), border-color 200ms var(--ease); }
-.social a:hover { background: var(--pink); border-color: var(--pink); color: var(--white); }
+.social { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; }
+.social a { display: inline-flex; padding: 2px; color: var(--pearl); transition: color 200ms var(--ease); }
+.social a:hover { color: var(--pink); }
 .footer-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .footer-grid p { margin: 0 0 8px; }
 .footer-grid .eyebrow { color: #9A9CA1; margin-bottom: 12px; }
