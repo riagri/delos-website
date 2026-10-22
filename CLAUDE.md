@@ -1,6 +1,6 @@
 # Delos Recruitment website
 
-Website for Delos Recruitment Ltd, a specialist recruitment-to-recruitment (rec2rec) consultancy run by Maria Gripari, founder and director, based in Surrey. Live at delosrecruitment.co.uk.
+Website for Delos Recruitment Ltd, a specialist recruitment-to-recruitment (rec2rec) consultancy run by Maria Gripari, founder and director, based in Surrey. Also hires for sales, operations and marketing roles. Live at delosrecruitment.co.uk.
 
 ## Working rules (keep usage low)
 
@@ -15,29 +15,36 @@ Website for Delos Recruitment Ltd, a specialist recruitment-to-recruitment (rec2
 ## Brand
 
 - Tagline: "Everything you have heard about recruitment is a myth"
-- Pillars (Greek values that shape the copy and tone): Xenia (hospitality, how people are treated), Phronesis (practical wisdom), Sophrosyne (balance, self-restraint), Kairos (the right moment)
 - Voice: confident but not boastful, warm but not fluffy, direct without being blunt. No buzzwords, no recruitment clichés, no corporate filler.
-- Colours: Delos Blue `#0053BF` (primary), Bougainvillea Bloom `#EC2193` (accent, use sparingly). Plenty of white space.
+- Colours: Delos Blue `#0053BF` (primary), Bougainvillea Bloom `#EC2193` (accent, use sparingly), Hellenic Slate `#1D1E21` (text), Ionian Pearl `#F9F9F9` (background).
 - Look: clean, editorial, fashion-magazine feel rather than corporate recruitment site. Generous type, strong headings, few boxes and icons.
-- Logo is built around hand-painted Greek signs. Logo and illustration files go in `/assets`. Use a text placeholder until they're added.
+- Logo files are in `/assets`. Never use the D mark (or any faded or oversized mark) as a background or decoration. Backgrounds are single flat colours.
+- Headline font is Gloock (free, SIL Open Font Licence). Never use Erstoria.
+- Never use em dashes or en dashes in copy. UK English. No emoji, no exclamation marks.
+- Website copy comes only from Maria's own signed-off copy. Never use wording from the original brand book.
 
-## Pages (first version)
+## Pages
 
-1. **Home** – tagline, what Delos does in two or three sentences, two clear paths: "I'm hiring recruiters" / "I'm a recruiter thinking of moving".
-2. **For clients** – agencies and in-house teams hiring recruiters, BDMs and trainees: how Delos works, why it's different.
-3. **For candidates** – recruiters considering a move: confidential, honest advice, what to expect.
-4. **About** – Maria's story: seven years at a recruitment business across operations, compliance, legal investigations, training and development and internal recruitment, then founding Delos in April 2025. Leave space for a photo of Maria (`[MARIA TO CONFIRM: photo]`).
-5. **Contact** – Calendly booking plus email.
+All copy is approved by Maria in the "Delos Website Copy" doc. Change wording only when she asks.
 
-One shared header and footer. Mobile first.
+1. **Home** (index.html): tagline, scope, Maria's opening line, two paths (Hiring, Careers), closing line.
+2. **Hiring** (hiring.html): for recruitment businesses hiring.
+3. **Careers** (careers.html): for people thinking about a move into recruitment.
+4. **About** (about.html): Maria's master copy, word for word. Add her photo when she sends one.
+5. **Contact** (contact.html): Calendly link, email and phone.
+6. **Privacy notice** (privacy.html): copied word for word from her Lawspeed privacy-notice.pdf.
+
+One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.xml, robots.txt and llms.txt support search and AI search.
 
 ## Contact details
 
-- Email: maria@delosrecruitment.co.uk
+- Email (public): hello@delosrecruitment.co.uk
+- Phone: +44 7537 142925
 - Book a call: https://calendly.com/maria-delosrecruitment (embed Calendly's inline widget on Contact, link buttons elsewhere)
 - Footer: Delos Recruitment Ltd, company number and registered address as `[MARIA TO CONFIRM]` placeholders, privacy policy link (placeholder page).
 
 ## Hosting
 
 - GitHub Pages from the main branch, root folder.
-- Custom domain: add a `CNAME` file containing `delosrecruitment.co.uk`.
+- Custom domain: delosrecruitment.co.uk (DNS on IONOS). Set via GitHub Pages settings; never touch email/MX records.
+- No secrets, keys or private data ever go in this repo: it is public.
