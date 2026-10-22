@@ -7,6 +7,7 @@ Website for Delos Recruitment Ltd, a specialist recruitment-to-recruitment (rec2
 - Read this file instead of asking about brand, pages or tech. Only ask Maria when a decision genuinely isn't covered here.
 - Do the task you were given, then stop. Don't refactor, restyle or "improve" anything outside it.
 - Keep it simple: plain HTML and CSS, minimal vanilla JavaScript only where needed. No frameworks, no build step, no npm packages.
+- Visitor stats: none for now. If Maria wants them, use Plausible (cookie-free, no banner): script `https://plausible.io/js/script.outbound-links.tagged-events.js` with `data-domain="delosrecruitment.co.uk"`, allow plausible.io in the security policy, and tag buttons with `plausible-event-name=...` classes. Never add cookie-setting tools (Google Analytics, embeds) without a consent banner.
 - Edit files in place with small targeted changes. Don't rewrite whole files to change a few lines.
 - Don't run long checks or install tools. Open the page once at the end to confirm it renders.
 - Never invent facts. No made-up testimonials, client names, placement numbers, fees or statistics. Where real content is missing, leave a clearly marked placeholder: `[MARIA TO CONFIRM: ...]`.
