@@ -84,7 +84,7 @@ a:hover { color: var(--delos-blue-900); }
   padding: 4px 0; border-bottom: 2px solid transparent;
 }
 .nav a:hover { color: var(--delos-blue); }
-.nav a[aria-current="page"] { color: var(--delos-blue); border-bottom-color: var(--delos-blue); }
+.nav a[aria-current="page"] { color: var(--delos-blue); border-bottom-color: var(--pink); }
 
 /* Type */
 h1, h2, h3 {
@@ -97,8 +97,9 @@ h3 { font-size: clamp(26px, 3.4vw, 34px); line-height: 1.15; }
 p { margin: 0 0 1em; text-wrap: pretty; }
 .eyebrow {
   font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--delos-blue); margin-bottom: 20px;
+  color: var(--pink-700); margin-bottom: 20px;
 }
+.dot { color: var(--pink); }
 .lede { font-size: clamp(19px, 2.2vw, 22px); line-height: 1.5; max-width: 38em; }
 .muted { color: var(--slate-500); }
 
