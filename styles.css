@@ -96,14 +96,14 @@ h2 { font-size: clamp(34px, 5.6vw, 64px); }
 h3 { font-size: clamp(26px, 3.4vw, 34px); line-height: 1.15; }
 p { margin: 0 0 1em; text-wrap: pretty; }
 .eyebrow {
-  font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--delos-blue); margin-bottom: 20px;
+  font-size: 15px; font-weight: 500; letter-spacing: 0; text-transform: none;
+  color: var(--slate-500); margin-bottom: 12px;
 }
 .dot { color: var(--pink); }
 .lede { font-size: clamp(19px, 2.2vw, 22px); line-height: 1.5; max-width: 38em; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 24px 0 8px; padding: 0; }
 .chips { gap: 6px 22px; }
-.chips li { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); line-height: 1.6; }
+.chips li { font-size: 16px; font-weight: 400; color: var(--slate); line-height: 1.6; }
 .chips li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--pink); margin: 0 10px 2px 0; vertical-align: middle; }
 .chips + p { margin-top: 32px; }
 .muted { color: var(--slate-500); }
@@ -177,7 +177,7 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .myths li { border-bottom: 1px solid var(--slate-200); }
 .myths summary { list-style: none; cursor: pointer; padding: 28px 0; display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; align-items: end; }
 .myths summary::-webkit-details-marker { display: none; }
-.myths .label { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate-500); grid-column: 1 / -1; }
+.myths .label { display: block; font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--slate-500); grid-column: 1 / -1; }
 .myth { font-family: var(--font-display); font-size: clamp(24px, 3vw, 34px); line-height: 1.15; color: var(--delos-blue); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
 .myths details[open] .myth { text-decoration-color: var(--pink); }
 .reveal { font-size: 14px; font-weight: 600; color: var(--delos-blue); white-space: nowrap; padding-bottom: 6px; }
@@ -194,7 +194,7 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .quotes blockquote { margin: 0; font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 28px); line-height: 1.25; color: var(--delos-blue); }
 .quotes blockquote p { margin: 0 0 14px; }
 .quotes blockquote p::before { content: "\201C"; } .quotes blockquote p::after { content: "\201D"; }
-.quotes figcaption { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate-500); }
+.quotes figcaption { font-size: 15px; font-weight: 400; color: var(--slate-500); }
 .more-reviews { margin: 40px 0 0; }
 
 /* About */
@@ -257,6 +257,10 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .closer .ad.banner { width: 100%; aspect-ratio: 4 / 5; border-radius: 0; clip-path: inset(0 var(--pad) round 4px); }
 .closer .ad.banner .ad-copy, .closer .ad.banner .ad-mark { margin: 0 var(--pad); }
 .ad-copy .btn { margin-top: 1.4cqi; white-space: nowrap; }
+.ad-cta { position: absolute; white-space: nowrap; }
+.ad-cta.br { right: 5.5cqi; bottom: 5.5cqi; }
+.closer .ad-cta.br { right: calc(5.5cqi + var(--pad)); }
+.campaign-row .ad-copy .btn { padding: 12px 18px; font-size: 15px; }
 .ad-photo.pos-eagle { object-position: 50% 0%; }
 .ad-photo.pos-pillars { object-position: 50% 35%; }
 .ad-photo.pos-mykonos { object-position: 50% 60%; }
@@ -268,9 +272,6 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   .ad.banner .ad-mark { width: clamp(64px, 6cqi, 104px); min-width: 0; }
   .ad.banner .ad-copy .btn { margin-top: 8px; }
 }
-.campaign-head h2 { margin: 0; }
-.campaign-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; margin-bottom: 28px; }
-.campaign-head .eyebrow { margin: 0; }
 .campaign-row { display: grid; gap: 20px; }
 @media (min-width: 760px) { .campaign-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
