@@ -179,24 +179,18 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .contact-list { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--slate-200); }
 .contact-list li { padding: 16px 0; border-bottom: 1px solid var(--slate-200); }
 
-/* Stories: each campaign photo is its section. The photo runs edge to edge with its headline set
-   along the bottom, on the same column as the words beneath, so the headline flows straight into the
-   text. One soft shade at the foot of every photo keeps the white headline readable on all of them. */
-.story { padding-bottom: 72px; }
-.story-photo { position: relative; margin: 0; overflow: hidden; aspect-ratio: 1 / 1; background: var(--slate); }
-.story-photo img { width: 100%; height: 100%; object-fit: cover; }
-.story-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(0deg, rgba(12, 14, 18, 0.62) 0%, rgba(12, 14, 18, 0.28) 30%, rgba(12, 14, 18, 0) 58%); }
-.story-head { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding-bottom: 28px; }
-.story-head h1, .story-head h2 { color: var(--white); margin: 0; max-width: 16em; }
-.story-body { padding-top: 32px; }
-.story-body .paths { margin-top: 8px; }
-.pos-eagle { object-position: 50% 30%; }
-.pos-sisyphus { object-position: 70% 50%; }
-.pos-ships { object-position: 30% 60%; }
-.pos-pillars { object-position: 50% 30%; }
-.pos-labyrinth { object-position: 50% 50%; }
-.pos-mykonos { object-position: 50% 60%; }
+/* Opener: every page opens the same way. Headline and words on the left, one candid people photo
+   on the right, clean (no text on it), running to the edge of the screen. Photos appear nowhere else. */
+.opener { display: grid; overflow: hidden; }
+.opener-text { min-width: 0; padding: 40px var(--pad) 64px; }
+.opener-inner { max-width: 620px; }
+.opener-inner .actions { margin-top: 28px; }
+.opener-photo { order: -1; margin: 0; overflow: hidden; aspect-ratio: 1 / 1; background: var(--slate-200); }
+.opener-photo img { width: 100%; height: 100%; object-fit: cover; }
+.opener-placeholder { display: flex; align-items: center; justify-content: center; padding: 32px; text-align: center; color: var(--slate-500); font-size: var(--t-small); }
+.opener-placeholder p { margin: 0; max-width: 18em; }
+.pos-labyrinth { object-position: 50% 45%; }
+.pos-sisyphus { object-position: 62% 50%; }
 
 /* Footer */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 64px 0 48px; font-size: var(--t-small); }
@@ -218,12 +212,9 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   .site-header nav { width: auto; order: 1; margin-left: auto; }
   .header-cta { order: 2; margin-left: 8px; }
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
-  .story { padding-bottom: 104px; }
-  .story-photo { aspect-ratio: auto; height: clamp(480px, 72vh, 720px); }
-  .story-head { padding-bottom: 48px; }
-  .story-body { padding-top: 48px; }
-  .pos-ships { object-position: 50% 70%; }
-  .pos-labyrinth { object-position: 50% 58%; }
+  .opener { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); min-height: clamp(560px, 80vh, 760px); }
+  .opener-text { display: flex; align-items: center; padding: 96px 56px 96px max(var(--pad), calc((100vw - var(--container)) / 2 + var(--pad))); }
+  .opener-photo { order: 0; aspect-ratio: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -233,8 +224,8 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 /* Motion (assets/js/motion.js). Headings wait hidden until the reveal starts. */
 html.motion main h1, html.motion main h2 { visibility: hidden; }
 html.motion .legal h2 { visibility: visible; }
-html.motion .story-photo { clip-path: inset(0% 0% 100% 0%); }
-html.motion .story-body > :not(h1):not(h2) { visibility: hidden; }
+html.motion .opener-photo { clip-path: inset(0% 0% 100% 0%); }
+html.motion .opener-inner > :not(h1) { visibility: hidden; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: clip; }
