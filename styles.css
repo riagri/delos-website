@@ -247,20 +247,18 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 }
 
 /* Campaign images: photo with headline set into it, DELOS wordmark only */
-/* Campaign images: full height spreads that run to the edge of the screen */
-.spread { display: grid; padding: 0; }
-.spread-text { min-width: 0; padding: 64px var(--pad) 56px; display: flex; align-items: center; }
-.spread-inner { width: 100%; max-width: 620px; }
-.spread .ad { width: 100%; max-width: none; }
-.spread.reverse .ad { order: 2; }
-@media (min-width: 900px) {
-  .spread { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: 620px; }
-  .spread-text { padding: 104px 72px 104px max(var(--pad), calc((100vw - var(--container)) / 2 + var(--pad))); }
-  .spread.reverse .spread-text { padding: 104px max(var(--pad), calc((100vw - var(--container)) / 2 + var(--pad))) 104px 72px; }
-  .spread .ad { aspect-ratio: auto; height: 100%; min-height: 620px; }
-  .spread.reverse .ad { order: 0; }
-}
-.paths.stacked { grid-template-columns: 1fr !important; gap: 40px; }
+/* Campaign images: never beside paragraphs. One per page closes it, paired only with an action;
+   Home shows a small campaign row. Corners match the buttons. */
+.ad { border-radius: 6px; }
+.closer-grid { display: grid; gap: 28px; justify-items: center; }
+.closer .ad { width: 100%; max-width: 520px; }
+.closer-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: center; }
+.closer-alt { margin: 0; color: var(--pearl); }
+.closer-alt a { color: var(--pearl); }
+.campaign-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; margin-bottom: 28px; }
+.campaign-head .eyebrow { margin: 0; }
+.campaign-row { display: grid; gap: 20px; }
+@media (min-width: 760px) { .campaign-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 .ad-row { display: grid; gap: 28px; justify-content: center; grid-template-columns: minmax(0, 640px); }
 @media (min-width: 900px) { .ad-row.two { grid-template-columns: repeat(2, minmax(0, 560px)); } }
