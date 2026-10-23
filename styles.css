@@ -96,7 +96,7 @@ a:hover { color: var(--delos-blue-900); }
 
 /* Type */
 h1, h2, h3 {
-  font-family: var(--font-display); font-weight: 400; color: var(--delos-blue);
+  font-family: var(--font-display); font-weight: 400; color: var(--slate);
   margin: 0 0 0.45em; text-wrap: balance;
 }
 h1 { font-size: var(--t-display); line-height: 1.02; letter-spacing: -0.02em; }
@@ -160,7 +160,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 .myths summary { list-style: none; cursor: pointer; padding: 28px 0; display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; align-items: end; }
 .myths summary::-webkit-details-marker { display: none; }
 .myths .label { display: block; font-family: var(--font-body); font-size: var(--t-small); font-weight: 500; color: var(--slate-500); grid-column: 1 / -1; }
-.myth { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.15; color: var(--delos-blue); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
+.myth { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.15; color: var(--slate); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
 .myths details[open] .myth { text-decoration-color: var(--pink); }
 .reveal { font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); white-space: nowrap; padding-bottom: 4px; }
 .reveal::after { content: "Ask the oracle +"; }
