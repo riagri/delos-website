@@ -86,6 +86,15 @@
       }
     });
 
+    // Closing bands: the one authored moment per page. The inset, rounded frame
+    // widens to the full screen as it scrolls into view.
+    document.querySelectorAll('.closer .ad.banner').forEach(function (band) {
+      gsap.fromTo(band, { clipPath: getComputedStyle(band).clipPath }, {
+        clipPath: 'inset(0px 0px round 0px)', ease: 'none',
+        scrollTrigger: { trigger: band, start: 'top 90%', end: 'top 20%', scrub: true }
+      });
+    });
+
     root.classList.add('motion-ready');
   }
 
