@@ -209,7 +209,8 @@ a.card:hover .card-hint, a.card:focus-visible .card-hint { opacity: 1; transform
 .pos-labyrinth { object-position: 50% 45%; }
 .pos-sisyphus { object-position: 62% 50%; }
 .pos-pillars { object-position: 40% 50%; }
-.pos-ships { object-position: 20% 50%; }
+.pos-ships { object-position: 50% 60%; }
+@media (min-width: 760px) { .pos-ships { object-position: 50% 84%; } }
 .pos-crossroads { object-position: 50% 50%; }
 .pos-plane { object-position: 54% 58%; }
 .pos-dead-end { object-position: 50% 50%; }
