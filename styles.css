@@ -69,8 +69,7 @@ a:hover { color: var(--delos-blue-900); }
 ::selection { background: var(--pink); color: var(--white); }
 
 .wrap { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--pad); }
-.wrap.narrow { padding-left: calc(var(--pad) + var(--inset)); padding-right: calc(var(--pad) + var(--inset)); }
-.wrap.narrow > * { max-width: 760px; }
+.wrap.narrow > * { max-width: 760px; } /* one left edge: text lines up with the photos above it */
 
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 16px; background: var(--white); padding: 8px 12px; z-index: 20; }
@@ -119,7 +118,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 /* Sections */
 .hero { padding: 64px 0 72px; position: relative; overflow: hidden; }
 .section { padding: 72px 0; }
-.section.white { background: var(--white); border-top: 1px solid var(--slate-200); border-bottom: 1px solid var(--slate-200); }
+.section:not(.brand) { border-top: 1px solid var(--slate-200); } /* every section divided by the same hairline */
 .section.brand { background: var(--delos-blue); color: var(--pearl); }
 .section.brand h2, .section.brand h3 { color: var(--pearl); }
 
@@ -182,7 +181,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 
 /* Quotes */
 .quotes { display: grid; gap: 40px; margin-top: 40px; }
-.quotes figure { margin: 0; padding: 36px 32px 32px; background: var(--pearl); border-radius: var(--radius-lg); }
+.quotes figure { margin: 0; padding: 36px 32px 32px; background: var(--white); border-radius: var(--radius-lg); }
 .quotes figure::before { content: "\201C"; display: block; font-family: var(--font-display); font-size: 88px; line-height: 0.6; height: 40px; color: var(--pink); }
 .quotes blockquote { margin: 0; font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.25; color: var(--slate); }
 .quotes blockquote p { margin: 0 0 18px; }
@@ -198,7 +197,7 @@ a.card:hover h3 { color: var(--delos-blue); }
    own open space (sky, sea, open road), like a magazine cover line. No filters, nothing covering the
    subject. Under the photo: one short hook line, then the detail and the action, on one left edge.
    Careers repeats the same frame for its second story (.story). */
-.opener { overflow: hidden; padding: 24px 0 64px; }
+.opener { overflow: hidden; padding: 24px 0 72px; }
 .opener.story { padding-top: 0; }
 .opener-photo { position: relative; margin: 0 auto; width: calc(100% - 2 * var(--pad)); max-width: calc(var(--container) - 2 * var(--pad)); overflow: hidden; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); background: var(--slate-200); }
 .opener-photo img { width: 100%; height: 100%; object-fit: cover; }
@@ -214,10 +213,12 @@ a.card:hover h3 { color: var(--delos-blue); }
 .ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 61%; transform: translateX(-50%); text-align: center; width: max-content; }
 .ph-pillars .photo-title { top: var(--inset); bottom: auto; }
 .ph-sisyphus { --ts: 30px; }
-.ph-sisyphus .photo-title { top: var(--inset); bottom: auto; }
+.ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
 .ph-crossroads { --ts: 34px; }
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
+.ph-umbrella { --ts: 44px; }
+.pos-umbrella { object-position: 50% 30%; }
 .ph-dead-end .photo-title { left: auto; right: var(--inset); top: var(--inset); bottom: auto; text-align: right; }
 .pos-labyrinth { object-position: 50% 6%; }
 .pos-pillars { object-position: 0% 60%; }
@@ -229,26 +230,30 @@ a.card:hover h3 { color: var(--delos-blue); }
 @media (min-width: 760px) {
   .ph-labyrinth { --ts: clamp(40px, 4vw, 54px); }
   .ph-labyrinth .photo-title { left: 52%; top: 5%; }
-  .ph-sisyphus { --ts: clamp(44px, 4.8vw, 66px); }
-  .ph-pillars { --ts: clamp(44px, 4.6vw, 62px); }
-  .ph-pillars .photo-title { top: auto; bottom: var(--inset); }
-  .ph-pillars img { width: 130%; max-width: none; height: 130%; margin-top: -9%; } /* closer crop: more sky to the left of the temple */
+  .ph-sisyphus { --ts: clamp(56px, 7vw, 100px); }
+  .ph-sisyphus .photo-title { top: 50%; transform: translateY(-50%); max-width: none; }
+  .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
+  .ph-pillars { --ts: clamp(50px, 5.6vw, 78px); }
+  .ph-pillars .photo-title { bottom: auto; top: 50%; transform: translateY(-50%); }
+  .ph-pillars img { width: 172%; max-width: none; height: 172%; margin-top: -30%; } /* closer crop: the open sky fills the left half for the headline */
   .ph-crossroads { --ts: clamp(40px, 4vw, 54px); }
   .pos-labyrinth { object-position: 50% 26%; }
   .pos-pillars { object-position: 100% 50%; }
   .pos-sisyphus { object-position: 62% 50%; }
   .pos-plane { object-position: 50% 50%; }
   .pos-ships { object-position: 50% 84%; }
+  .ph-umbrella { --ts: clamp(56px, 7vw, 100px); }
+  .pos-umbrella { object-position: 50% 44%; }
 }
 .opener-text { padding: 0 var(--pad); }
-.opener-inner { max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; padding: 36px var(--inset) 0; }
+.opener-inner { max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; padding: 40px 0 0; }
 .opener-inner > :last-child { margin-bottom: 0; }
 .opener-inner p:not(.lede):not(.hook) { max-width: 38em; }
 .opener-inner .chips { margin-top: 0; }
 .opener-inner .actions { margin-top: 28px; }
 .opener-inner .contact-list { max-width: 38em; }
 /* The follow-up line straight under each photo: one short hook in the headline face, then the detail. */
-.hook { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.2; letter-spacing: -0.005em; max-width: 24em; margin: 0 0 0.6em; text-wrap: balance; color: var(--slate); }
+.hook { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.2; letter-spacing: -0.005em; max-width: 24em; margin: 0 0 0.7em; text-wrap: balance; color: var(--slate); }
 
 /* Footer: three even columns. Company | Pages | Contact */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
@@ -272,10 +277,10 @@ a.card:hover h3 { color: var(--delos-blue); }
   .site-header nav { width: auto; order: 1; margin-left: auto; }
   .header-cta { order: 2; margin-left: 8px; }
   .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
-  .opener { padding: 40px 0 88px; }
+  .opener { padding: 40px 0 104px; }
   .opener.story { padding-top: 0; }
   .opener-photo { aspect-ratio: 16 / 9; max-height: calc(100vh - 140px); min-height: 460px; }
-  .opener-inner { padding-top: 44px; }
+  .opener-inner { padding-top: 48px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
