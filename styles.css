@@ -210,7 +210,7 @@ a.card:hover .card-hint, a.card:focus-visible .card-hint { opacity: 1; transform
 .pos-ships { object-position: 20% 50%; }
 .pos-crossroads { object-position: 50% 50%; }
 .pos-eagle { object-position: 46% 45%; }
-.pos-mykonos { object-position: 58% 50%; }
+.pos-dead-end { object-position: 50% 50%; }
 .section-photo { margin-top: 56px; }
 
 /* Footer */
