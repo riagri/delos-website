@@ -97,7 +97,7 @@ h3 { font-size: clamp(26px, 3.4vw, 34px); line-height: 1.15; }
 p { margin: 0 0 1em; text-wrap: pretty; }
 .eyebrow {
   font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--pink); margin-bottom: 20px;
+  color: var(--delos-blue); margin-bottom: 20px;
 }
 .dot { color: var(--pink); }
 .lede { font-size: clamp(19px, 2.2vw, 22px); line-height: 1.5; max-width: 38em; }
@@ -128,8 +128,8 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .btn:active { transform: scale(0.97); }
 .btn.secondary { background: transparent; color: var(--delos-blue); }
 .btn.secondary:hover { background: var(--delos-blue-050); color: var(--delos-blue-900); box-shadow: none; }
-.btn.pink { background: var(--pink); border-color: var(--pink); color: var(--white); }
-.btn.pink:hover { background: var(--pink-700); border-color: var(--pink-700); color: var(--white); box-shadow: none; }
+.btn.pink { background: var(--pink); border-color: var(--pink); color: var(--white); font-size: 19px; font-weight: 700; }
+.btn.pink:hover { background: var(--pink); border-color: var(--pearl); color: var(--white); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18); }
 .btn.light { background: var(--pearl); color: var(--delos-blue); border-color: var(--pearl); }
 .btn.light:hover { background: var(--white); color: var(--delos-blue-900); }
 
@@ -180,12 +180,12 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .myths .label { display: block; font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate-500); grid-column: 1 / -1; }
 .myth { font-family: var(--font-display); font-size: clamp(24px, 3vw, 34px); line-height: 1.15; color: var(--delos-blue); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
 .myths details[open] .myth { text-decoration-color: var(--pink); }
-.reveal { font-size: 14px; font-weight: 600; color: var(--pink); white-space: nowrap; padding-bottom: 6px; }
+.reveal { font-size: 14px; font-weight: 600; color: var(--delos-blue); white-space: nowrap; padding-bottom: 6px; }
 .reveal::after { content: "Ask the oracle +"; }
 .myths details[open] .reveal::after { content: "Hide"; }
 .myths summary:hover .reveal { text-decoration: underline; text-underline-offset: 3px; }
 .truth { margin: -8px 0 0; padding: 0 0 28px; font-size: clamp(19px, 2.2vw, 22px); line-height: 1.5; max-width: 38em; }
-.truth .label { color: var(--pink); font-weight: 600; margin-bottom: 6px; }
+.truth .label { color: var(--delos-blue); font-weight: 600; margin-bottom: 6px; }
 @media (max-width: 559px) { .myths summary { grid-template-columns: 1fr; } .reveal { padding-bottom: 0; } }
 
 /* Quotes */
