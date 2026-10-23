@@ -47,7 +47,7 @@ One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.x
 ## Contact details
 
 - Email (public): hello@delosrecruitment.co.uk
-- Phone: +44 7537 142925
+- Phone: +44 7537 142925 (also WhatsApp: https://wa.me/447537142925, link only, on Contact and in the footer)
 - Book a call: https://calendly.com/maria-delosrecruitment. Link out only, never embed (an embed sets third-party cookies on our site, which would need a cookie consent banner). Calendly is on the free plan, so there is one event type ("Initial Call"). Client and candidate buttons both use it, prefilling the first question:
   - Client: https://calendly.com/maria-delosrecruitment/initial-call?a1=Client%20call
   - Candidate: https://calendly.com/maria-delosrecruitment/initial-call?a1=Candidate%20call
