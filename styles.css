@@ -247,17 +247,21 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 }
 
 /* Campaign images: photo with headline set into it, DELOS wordmark only */
-/* Campaign images sit beside the words they belong to */
-.split { display: grid; gap: 48px; align-items: center; }
-.split-text { min-width: 0; }
-.paths.stacked { grid-template-columns: 1fr !important; gap: 40px; }
-.split .ad { width: 100%; max-width: 560px; justify-self: center; }
+/* Campaign images: full height spreads that run to the edge of the screen */
+.spread { display: grid; padding: 0; }
+.spread-text { min-width: 0; padding: 64px var(--pad) 56px; display: flex; align-items: center; }
+.spread-inner { width: 100%; max-width: 620px; }
+.spread .ad { width: 100%; max-width: none; }
+.spread.reverse .ad { order: 2; }
 @media (min-width: 900px) {
-  .split { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 72px; }
-  .split.reverse { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-  .split.reverse .ad { order: -1; }
-  .split .ad.sticky { align-self: start; position: sticky; top: 112px; }
+  .spread { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: 620px; }
+  .spread-text { padding: 104px 72px 104px max(var(--pad), calc((100vw - var(--container)) / 2 + var(--pad))); }
+  .spread.reverse .spread-text { padding: 104px max(var(--pad), calc((100vw - var(--container)) / 2 + var(--pad))) 104px 72px; }
+  .spread .ad { aspect-ratio: auto; height: 100%; min-height: 620px; }
+  .spread.reverse .ad { order: 0; }
 }
+.paths.stacked { grid-template-columns: 1fr !important; gap: 40px; }
+
 .ad-row { display: grid; gap: 28px; justify-content: center; grid-template-columns: minmax(0, 640px); }
 @media (min-width: 900px) { .ad-row.two { grid-template-columns: repeat(2, minmax(0, 560px)); } }
 .ad { position: relative; margin: 0; aspect-ratio: 1 / 1; max-width: 100%; overflow: hidden; container-type: inline-size; background: var(--slate); }
