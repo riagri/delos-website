@@ -204,6 +204,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 .pos-ships { object-position: 20% 50%; }
 .pos-crossroads { object-position: 50% 50%; }
 .pos-eagle { object-position: 46% 45%; }
+.pos-mykonos { object-position: 58% 50%; }
 .section-photo { margin-top: 56px; }
 
 /* Footer */
