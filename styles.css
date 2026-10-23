@@ -246,6 +246,13 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   * { transition: none !important; }
 }
 
+/* Motion (assets/js/motion.js). Headings wait hidden until the reveal starts. */
+html.motion main h1, html.motion main h2 { visibility: hidden; }
+html.motion .legal h2 { visibility: visible; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+
 /* Legal pages */
 .legal h2 { font-size: clamp(28px, 4vw, 40px); margin-top: 1.6em; }
 .legal h3 { font-size: 24px; margin-top: 1.4em; }
