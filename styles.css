@@ -223,7 +223,7 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   .story-head { padding-bottom: 48px; }
   .story-body { padding-top: 48px; }
   .pos-ships { object-position: 50% 70%; }
-  .pos-labyrinth { object-position: 50% 42%; }
+  .pos-labyrinth { object-position: 50% 58%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
