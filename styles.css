@@ -246,6 +246,35 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
   * { transition: none !important; }
 }
 
+/* Campaign images: photo with headline set into it, DELOS wordmark only */
+.ads { padding: 72px 0; }
+.ad-row { display: grid; gap: 28px; justify-content: center; grid-template-columns: minmax(0, 640px); }
+@media (min-width: 900px) { .ad-row.two { grid-template-columns: repeat(2, minmax(0, 560px)); } }
+.ad { position: relative; margin: 0; aspect-ratio: 1 / 1; max-width: 100%; overflow: hidden; container-type: inline-size; background: var(--slate); }
+.ad-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ad-shade { position: absolute; inset: 0; pointer-events: none; }
+.ad-copy { position: absolute; display: grid; gap: 2.6cqi; justify-items: center; text-align: center; }
+.ad-hl { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 34px; font-size: 7.2cqi; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+.ad-rule { display: block; width: 22cqi; height: 1px; background: currentColor; opacity: 0.75; }
+.ad-sub { margin: 0; font-size: 15px; font-size: 2.9cqi; line-height: 1.4; font-weight: 400; }
+.ad-mark { position: absolute; width: 11cqi; min-width: 48px; height: auto; }
+.ad-mark.br { right: 5.5cqi; bottom: 5.5cqi; }
+.ad-mark.tl { left: 5.5cqi; top: 5.5cqi; }
+.ad.light .ad-copy { color: var(--pearl); }
+.ad.dark .ad-copy { color: var(--slate); }
+.ad.top .ad-copy { top: 7cqi; left: 50%; transform: translateX(-50%); width: 62%; }
+.ad.top.narrow-copy .ad-copy { top: 6cqi; width: 46%; }
+.ad.top.narrow-copy .ad-hl { font-size: 6.4cqi; }
+.ad.bottom .ad-copy { bottom: 6cqi; left: 50%; transform: translateX(-50%); width: 76%; }
+.ad.bottom .ad-shade { background: linear-gradient(0deg, rgba(10, 12, 16, 0.7), rgba(10, 12, 16, 0.25) 34%, rgba(10, 12, 16, 0) 55%); }
+.ad.top-right .ad-copy { top: 7cqi; right: 5cqi; width: 50%; }
+.ad.top-right .ad-shade { background: radial-gradient(90% 60% at 80% 12%, rgba(8, 16, 30, 0.34), rgba(8, 16, 30, 0) 70%); }
+.ad.bottom-left .ad-copy { bottom: 6cqi; left: 5cqi; width: 44%; text-align: left; justify-items: start; }
+.ad.top-left .ad-copy { top: 6cqi; left: 6cqi; width: 44%; text-align: left; justify-items: start; }
+.ad-mark.tr { right: 5.5cqi; top: 5.5cqi; }
+.ad.dark .ad-shade { background: none; }
+.ad.top-right .ad-copy { text-align: right; justify-items: end; }
+
 /* Motion (assets/js/motion.js). Headings wait hidden until the reveal starts. */
 html.motion main h1, html.motion main h2 { visibility: hidden; }
 html.motion .legal h2 { visibility: visible; }

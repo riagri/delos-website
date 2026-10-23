@@ -23,7 +23,8 @@ Website for Delos Recruitment Ltd, a specialist recruitment-to-recruitment (rec2
 - Logo files are in `/assets`. Never use the D mark (or any faded or oversized mark) as a background or decoration. Backgrounds are single flat colours.
 - Headline font is Gloock (free, SIL Open Font Licence). Never use Erstoria.
 - Never use em dashes or en dashes in copy. UK English. No emoji, no exclamation marks.
-- Team voice: Delos speaks as "we" so it reads as more than one person. No "I", no personal "about Maria" section, no photos for now.
+- Team voice: Delos speaks as "we" so it reads as more than one person. No "I", no personal "about Maria" section, no photos of people from Maria's life.
+- Campaign images (agreed with Maria, Oct 2026): Greek myth themed photos with a short headline set into the image, DELOS wordmark only (`assets/mark-white.svg`, `assets/mark-slate.svg`), no pink highlights, no nudity, no generative AI images. Free Unsplash licence photos, saved as square crops in `assets/img`. Current set: labyrinth (Home), pillars (Hiring), eagle and Sisyphus (Careers), ships (Contact), Mykonos alley (404). Headlines are signed off by Maria; don't change them without asking. On scroll the question or statement lands first and the answer follows.
 - Speak directly to the reader ("you", "your business"). Hiring speaks to clients, Careers to candidates. About describes the business.
 - Stress thoroughness, never speed ("quick", "fast", "efficient").
 - Reviews: keep to two or three, quoted word for word, credited by role (for example "Candidate, Google review"), never by name.
