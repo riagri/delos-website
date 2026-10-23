@@ -194,11 +194,15 @@ a.card:hover h3 { color: var(--delos-blue); }
 .opener-inner .actions { margin-top: 28px; }
 .opener-photo { margin: 40px auto 0; width: calc(100% - 2 * var(--pad)); max-width: calc(var(--container) - 2 * var(--pad)); overflow: hidden; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); background: var(--slate-200); }
 .opener-photo img { width: 100%; height: 100%; object-fit: cover; }
+/* One shared grade so every photo reads as one set: a little warmer and softer, like film. */
+.opener-photo img, .card-photo img { filter: sepia(.14) saturate(.86) contrast(1.04) brightness(.98); }
 .opener-placeholder { display: flex; align-items: center; justify-content: center; padding: 32px; text-align: center; color: var(--slate-500); font-size: var(--t-small); }
 .opener-placeholder p { margin: 0; max-width: 18em; }
 .pos-labyrinth { object-position: 50% 45%; }
 .pos-sisyphus { object-position: 62% 50%; }
-.pos-at-work { object-position: 50% 28%; }
+.pos-pillars { object-position: 40% 50%; }
+.pos-ships { object-position: 20% 50%; }
+.pos-crossroads { object-position: 50% 50%; }
 
 /* Footer */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 64px 0 48px; font-size: var(--t-small); }
