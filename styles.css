@@ -201,7 +201,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 .opener.story { padding-top: 0; }
 .opener-photo { position: relative; margin: 0 auto; width: calc(100% - 2 * var(--pad)); max-width: calc(var(--container) - 2 * var(--pad)); overflow: hidden; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); background: var(--slate-200); }
 .opener-photo img { width: 100%; height: 100%; object-fit: cover; }
-.photo-title { position: absolute; z-index: 1; margin: 0; font-size: var(--ts, var(--t-display)); line-height: 1.02; letter-spacing: -0.02em; left: var(--inset); right: auto; top: auto; bottom: var(--inset); color: var(--white); }
+.photo-title { position: absolute; z-index: 1; margin: 0; font-size: var(--ts, 30px); line-height: 1.04; letter-spacing: -0.02em; left: var(--inset); right: auto; top: auto; bottom: var(--inset); color: var(--white); }
 .photo-title.ink { color: var(--slate); }
 .opener-photo.shade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 18, 22, 0.7) 0%, rgba(17, 18, 22, 0.35) 34%, rgba(17, 18, 22, 0) 60%); pointer-events: none; }
 /* Pink highlight bars: only where a photo has no open space (the crossroads), so the line still reads. */
@@ -212,12 +212,10 @@ a.card:hover h3 { color: var(--delos-blue); }
 .ph-labyrinth { --ts: 27px; }
 .ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 61%; transform: translateX(-50%); text-align: center; width: max-content; }
 .ph-pillars .photo-title { top: var(--inset); bottom: auto; }
-.ph-sisyphus { --ts: 30px; }
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
 .ph-crossroads { --ts: 34px; }
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
-.ph-bridge { --ts: 32px; }
 .ph-bridge .photo-title { top: var(--inset); bottom: auto; }
 .ph-bridge img { width: 150%; height: 150%; max-width: none; margin-left: -25%; } /* crop in from the top: more sky, less road */
 .pos-bridge { object-position: 30% 0%; }
@@ -230,21 +228,17 @@ a.card:hover h3 { color: var(--delos-blue); }
 .pos-ships { object-position: 50% 60%; }
 .pos-dead-end { object-position: 50% 50%; }
 @media (min-width: 760px) {
-  .ph-labyrinth { --ts: clamp(40px, 4vw, 54px); }
-  .ph-labyrinth .photo-title { left: 52%; top: 5%; }
-  .ph-sisyphus { --ts: clamp(56px, 7vw, 100px); }
-  .ph-sisyphus .photo-title { top: 50%; transform: translateY(-50%); max-width: none; }
-  .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
-  .ph-pillars { --ts: clamp(50px, 5.6vw, 78px); }
+  .photo-title { --ts: clamp(40px, 4.2vw, 58px); }
+  .ph-dead-end .photo-title { left: var(--inset); right: auto; text-align: left; } /* open sky to the left of the sign */
+  .ph-labyrinth .photo-title { left: 55%; top: 4%; }
+  .ph-sisyphus .photo-title { max-width: none; }
   .ph-pillars .photo-title { bottom: auto; top: 50%; transform: translateY(-50%); }
-  .ph-pillars img { width: 172%; max-width: none; height: 172%; margin-top: -30%; } /* closer crop: the open sky fills the left half for the headline */
-  .ph-crossroads { --ts: clamp(40px, 4vw, 54px); }
+  .ph-pillars img { width: 140%; max-width: none; height: 140%; margin-top: -14%; } /* closer crop: the open sky fills the left half for the headline */
   .pos-labyrinth { object-position: 50% 26%; }
   .pos-pillars { object-position: 100% 50%; }
   .pos-sisyphus { object-position: 62% 50%; }
   .pos-plane { object-position: 50% 50%; }
   .pos-ships { object-position: 50% 84%; }
-  .ph-bridge { --ts: clamp(48px, 5.6vw, 76px); }
   .ph-bridge img { width: 145%; height: 145%; margin-left: -22%; }
   .ph-bridge .photo-title { top: 28px; }
   .pos-bridge { object-position: 50% 0%; }
