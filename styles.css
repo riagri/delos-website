@@ -203,6 +203,8 @@ a.card:hover h3 { color: var(--delos-blue); }
 .pos-pillars { object-position: 40% 50%; }
 .pos-ships { object-position: 20% 50%; }
 .pos-crossroads { object-position: 50% 50%; }
+.pos-eagle { object-position: 46% 45%; }
+.section-photo { margin-top: 56px; }
 
 /* Footer */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 64px 0 48px; font-size: var(--t-small); }
@@ -235,7 +237,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 /* Motion (assets/js/motion.js). Headings wait hidden until the reveal starts. */
 html.motion main h1, html.motion main h2 { visibility: hidden; }
 html.motion .legal h2 { visibility: visible; }
-html.motion .opener-photo { clip-path: inset(0% 0% 100% 0%); }
+html.motion .opener .opener-photo { clip-path: inset(0% 0% 100% 0%); }
 html.motion .opener-inner > :not(h1) { visibility: hidden; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
