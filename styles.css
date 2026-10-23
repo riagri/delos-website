@@ -64,6 +64,7 @@ a {
 }
 a:hover { color: var(--delos-blue-900); }
 :focus-visible { outline: 2px solid var(--delos-blue); outline-offset: 2px; }
+.section.brand :focus-visible, .site-footer :focus-visible { outline-color: var(--pearl); }
 ::selection { background: var(--pink); color: var(--white); }
 
 .wrap { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--pad); }
