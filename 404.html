@@ -122,18 +122,19 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="wrap narrow">
-      <h1>Page not found.</h1>
-      </div>
-    </section>
-
-    <section class="closer" aria-label="Go to the homepage">
-      <figure class="ad banner bottom light">
-        <img class="ad-photo pos-mykonos" src="/assets/img/mykonos-1200.jpg" srcset="/assets/img/mykonos-640.jpg 640w, /assets/img/mykonos-1200.jpg 1200w" sizes="(min-width: 900px) 640px, 100vw" alt="" width="1200" height="1200" loading="lazy" decoding="async">
-        <span class="ad-shade" aria-hidden="true"></span>
-        <figcaption class="ad-copy"><p class="ad-hl">Even Odysseus took a wrong turn.</p><span class="ad-rule" aria-hidden="true"></span><p class="ad-sub">Let's get you home.</p><a class="btn on-white" href="/index.html">Go to the homepage</a></figcaption>
+    <section class="story" aria-labelledby="nf-title">
+      <figure class="story-photo">
+        <img class="pos-mykonos" src="/assets/img/mykonos-1200.jpg" srcset="/assets/img/mykonos-640.jpg 640w, /assets/img/mykonos-1200.jpg 1200w" sizes="100vw" alt="" width="1200" height="1200" decoding="async">
+        <div class="story-head">
+          <div class="wrap narrow">
+            <h1 id="nf-title">Even Odysseus took a wrong turn<span class="dot">.</span></h1>
+          </div>
+        </div>
       </figure>
+      <div class="wrap narrow story-body">
+        <p class="lede">Page not found. Let's get you home.</p>
+        <div class="actions"><a class="btn" href="/index.html">Go to the homepage</a></div>
+      </div>
     </section>
 
   </main>
