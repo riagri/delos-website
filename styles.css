@@ -36,7 +36,7 @@
 
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --container: 1240px;
-  --radius-lg: 24px;
+  --radius-lg: 4px;
   --pad: clamp(16px, 4vw, 56px);
   --inset: clamp(22px, 4.5vw, 64px); /* text column inside the photo frame */
 }
@@ -126,7 +126,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 /* Buttons: one size everywhere */
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .btn {
-  display: inline-block; padding: 14px 26px; border-radius: 999px; border: 1.5px solid var(--delos-blue);
+  display: inline-block; padding: 14px 26px; border-radius: 4px; border: 1.5px solid var(--delos-blue);
   background: var(--delos-blue); color: var(--pearl); text-decoration: none;
   font-size: var(--t-small); font-weight: 500; line-height: 1.2;
   transition: background 200ms var(--ease), box-shadow 200ms var(--ease), transform 120ms var(--ease);
@@ -150,7 +150,8 @@ a.card:hover h3 { color: var(--delos-blue); }
 /* Each card carries its page's headline on the photo, as the page heroes do. */
 .card-photo { position: relative; }
 .card-hint { position: absolute; inset: auto 0 0 0; padding: 72px 28px 22px; margin: 0; font-family: var(--font-display); font-size: clamp(20px, 1.9vw, 24px); line-height: 1.2; letter-spacing: -0.01em; text-wrap: balance; color: #fff; background: linear-gradient(to top, rgba(29,30,33,.72) 0%, rgba(29,30,33,.35) 55%, rgba(29,30,33,0) 100%); opacity: 0; transform: translateY(8px); transition: opacity 400ms var(--ease), transform 400ms var(--ease); pointer-events: none; }
-.card-hint { opacity: 1; transform: none; }
+.card-hint { opacity: 1; transform: none; inset: 0 auto auto 0; padding: 22px 26px; max-width: 10.5em; background: none; }
+.card-hint.ink { color: var(--slate); }
 @media (prefers-reduced-motion: reduce) { .card-hint { transition: none; } }
 
 /* Steps */
@@ -193,38 +194,61 @@ a.card:hover h3 { color: var(--delos-blue); }
 .contact-list { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--slate-200); }
 .contact-list li { padding: 16px 0; border-bottom: 1px solid var(--slate-200); }
 
-/* Opener: every page opens the same way. The photo carries its headline in white along the bottom
-   (one soft dark shade), and the line beneath explains it, on the same left edge, so photo, headline
-   and words read as one piece. Careers repeats the same frame for its second story (.story). */
+/* Opener: every page opens the same way. A big photo with its headline set large in the photo's
+   own open space (sky, sea, open road), like a magazine cover line. No filters, nothing covering the
+   subject. Under the photo: one short hook line, then the detail and the action, on one left edge.
+   Careers repeats the same frame for its second story (.story). */
 .opener { overflow: hidden; padding: 24px 0 64px; }
 .opener.story { padding-top: 0; }
 .opener-photo { position: relative; margin: 0 auto; width: calc(100% - 2 * var(--pad)); max-width: calc(var(--container) - 2 * var(--pad)); overflow: hidden; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); background: var(--slate-200); }
 .opener-photo img { width: 100%; height: 100%; object-fit: cover; }
-.opener-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 18, 22, 0.74) 0%, rgba(17, 18, 22, 0.42) 34%, rgba(17, 18, 22, 0) 62%); pointer-events: none; }
-.photo-title { position: absolute; left: 0; bottom: 0; z-index: 1; margin: 0; padding: 0 var(--inset) var(--inset); max-width: 13em; color: var(--white); text-shadow: 0 2px 24px rgba(17, 18, 22, 0.35); }
-/* Per photo, the headline sits in the calmest part of the frame. Default is bottom left;
-   .title-top moves it (and the shade) to the top, e.g. Sisyphus, so the figure stays clear. */
-.opener-photo.title-top::after { background: linear-gradient(to bottom, rgba(17, 18, 22, 0.62) 0%, rgba(17, 18, 22, 0.3) 34%, rgba(17, 18, 22, 0) 60%); }
-.title-top .photo-title { top: 0; bottom: auto; padding: var(--inset) var(--inset) 0; }
-h2.photo-title { font-size: var(--t-display); line-height: 1.02; letter-spacing: -0.02em; }
+.photo-title { position: absolute; z-index: 1; margin: 0; font-size: var(--ts, var(--t-display)); line-height: 1.02; letter-spacing: -0.02em; left: var(--inset); right: auto; top: auto; bottom: var(--inset); color: var(--white); }
+.photo-title.ink { color: var(--slate); }
+.opener-photo.shade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 18, 22, 0.7) 0%, rgba(17, 18, 22, 0.35) 34%, rgba(17, 18, 22, 0) 60%); pointer-events: none; }
+/* Pink highlight bars: only where a photo has no open space (the crossroads), so the line still reads. */
+.photo-title.hl { line-height: 1.28; }
+.photo-title.hl span { background: var(--pink); color: var(--white); padding: 0 0.16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
+.ph-labyrinth { --ts: 27px; }
+.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 61%; transform: translateX(-50%); text-align: center; width: max-content; }
+.ph-pillars .photo-title { top: var(--inset); bottom: auto; }
+.ph-sisyphus { --ts: 30px; }
+.ph-sisyphus .photo-title { top: var(--inset); bottom: auto; }
+.ph-ships .photo-title { top: var(--inset); bottom: auto; }
+.ph-crossroads { --ts: 34px; }
+.ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
+.ph-dead-end .photo-title { left: auto; right: var(--inset); top: var(--inset); bottom: auto; text-align: right; }
+.pos-labyrinth { object-position: 50% 6%; }
+.pos-pillars { object-position: 0% 60%; }
+.pos-sisyphus { object-position: 30% 50%; }
+.pos-plane { object-position: 88% 50%; }
+.pos-crossroads { object-position: 50% 50%; }
+.pos-ships { object-position: 50% 60%; }
+.pos-dead-end { object-position: 50% 50%; }
+@media (min-width: 760px) {
+  .ph-labyrinth { --ts: clamp(40px, 4vw, 54px); }
+  .ph-labyrinth .photo-title { left: 52%; top: 5%; }
+  .ph-sisyphus { --ts: clamp(44px, 4.8vw, 66px); }
+  .ph-pillars { --ts: clamp(44px, 4.6vw, 62px); }
+  .ph-pillars .photo-title { top: auto; bottom: var(--inset); }
+  .ph-pillars img { width: 130%; max-width: none; height: 130%; margin-top: -9%; } /* closer crop: more sky to the left of the temple */
+  .ph-crossroads { --ts: clamp(40px, 4vw, 54px); }
+  .pos-labyrinth { object-position: 50% 26%; }
+  .pos-pillars { object-position: 100% 50%; }
+  .pos-sisyphus { object-position: 62% 50%; }
+  .pos-plane { object-position: 50% 50%; }
+  .pos-ships { object-position: 50% 84%; }
+}
 .opener-text { padding: 0 var(--pad); }
 .opener-inner { max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; padding: 36px var(--inset) 0; }
 .opener-inner > :last-child { margin-bottom: 0; }
-.opener-inner p:not(.lede) { max-width: 38em; }
+.opener-inner p:not(.lede):not(.hook) { max-width: 38em; }
 .opener-inner .chips { margin-top: 0; }
 .opener-inner .actions { margin-top: 28px; }
 .opener-inner .contact-list { max-width: 38em; }
-.opener-placeholder { display: flex; align-items: center; justify-content: center; padding: 32px; text-align: center; color: var(--slate-500); font-size: var(--t-small); }
-.opener-placeholder p { margin: 0; max-width: 18em; }
-.pos-labyrinth { object-position: 50% 45%; }
-.pos-sisyphus { object-position: 62% 50%; }
-.pos-pillars { object-position: 45% 60%; }
-.pos-ships { object-position: 50% 60%; }
-@media (min-width: 760px) { .pos-ships { object-position: 50% 84%; } }
-.pos-crossroads { object-position: 50% 50%; }
-.pos-plane { object-position: 88% 50%; }
-@media (min-width: 760px) { .pos-plane { object-position: 50% 50%; } }
-.pos-dead-end { object-position: 50% 50%; }
+/* The follow-up line straight under each photo: one short hook in the headline face, then the detail. */
+.hook { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.2; letter-spacing: -0.005em; max-width: 24em; margin: 0 0 0.6em; text-wrap: balance; color: var(--slate); }
 
 /* Footer: three even columns. Company | Pages | Contact */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
