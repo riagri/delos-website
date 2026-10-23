@@ -250,24 +250,23 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 /* Campaign images: never beside paragraphs. Each sits in its own full-width band on the page it
    belongs to, with its headline and one button. Corners match the buttons. */
 .ad { border-radius: 4px; }
-/* Closing band: the campaign image is the call to action. Full width, about a screen tall,
-   headline and one button docked over the calm part of the picture. At rest it is inset with the
-   buttons' 4px corners; with motion on it widens to the edges as it scrolls in (motion.js). */
-.closer { padding: 0; }
-.closer .ad.banner { width: 100%; aspect-ratio: 4 / 5; border-radius: 0; clip-path: inset(0 var(--pad) round 4px); }
-.closer .ad.banner .ad-copy, .closer .ad.banner .ad-mark { margin: 0 var(--pad); }
-.ad-copy .btn { margin-top: 1.4cqi; white-space: nowrap; font-size: 16px; font-weight: 500; }
-/* Image buttons sit under the headline, coloured to suit each photo */
-.btn.on-slate { background: var(--slate); border-color: var(--slate); color: var(--pearl); }
-.btn.on-slate:hover { background: #33353A; border-color: #33353A; color: var(--pearl); box-shadow: none; }
-.btn.on-pearl { background: var(--pearl); border-color: var(--pearl); color: var(--delos-blue); }
-.btn.on-pearl:hover { background: var(--white); border-color: var(--white); color: var(--delos-blue-900); box-shadow: none; }
+/* Campaign bands: one image per band, set inside the page gutter with the same 4px corners as
+   the buttons. Headline and one button over the calm part of the picture. */
+.closer { padding: 56px 0; }
+.closer .ad.banner { width: 100%; aspect-ratio: 4 / 5; border-radius: 4px; }
+/* Image buttons: black or white, one size everywhere, chosen to suit the photo */
+.ad-copy .btn { margin-top: 1.4cqi; padding: 14px 24px; white-space: nowrap; font-size: 16px; font-weight: 500; line-height: 1.2; }
+.btn.on-slate { background: var(--slate); border-color: var(--slate); color: var(--white); }
+.btn.on-slate:hover { background: #33353A; border-color: #33353A; color: var(--white); box-shadow: none; }
+.btn.on-white { background: var(--white); border-color: var(--white); color: var(--slate); }
+.btn.on-white:hover { background: var(--pearl); border-color: var(--pearl); color: var(--slate); box-shadow: none; }
 
 .ad-photo.pos-eagle { object-position: 50% 0%; }
 .ad-photo.pos-pillars { object-position: 50% 35%; }
 .ad-photo.pos-mykonos { object-position: 50% 60%; }
 @media (min-width: 760px) {
-  .closer .ad.banner { aspect-ratio: auto; height: clamp(560px, 92vh, 860px); }
+  .closer { padding: 88px 0; }
+  .closer .ad.banner { aspect-ratio: auto; height: clamp(520px, 80vh, 760px); }
   .ad.banner .ad-copy { width: 40%; gap: 16px; }
   .ad.banner .ad-hl { font-size: clamp(34px, 4.2cqi, 64px); }
   .ad.banner .ad-sub { font-size: clamp(15px, 1.5cqi, 19px); }
