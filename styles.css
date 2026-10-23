@@ -257,10 +257,15 @@ a.card:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; te
 .closer .ad.banner { width: 100%; aspect-ratio: 4 / 5; border-radius: 0; clip-path: inset(0 var(--pad) round 4px); }
 .closer .ad.banner .ad-copy, .closer .ad.banner .ad-mark { margin: 0 var(--pad); }
 .ad-copy .btn { margin-top: 1.4cqi; white-space: nowrap; }
-.ad-cta { position: absolute; white-space: nowrap; }
+.ad-cta { position: absolute; white-space: nowrap; background: var(--pearl); border-color: var(--pearl); color: var(--delos-blue); }
+.ad-cta:hover { background: var(--white); border-color: var(--white); color: var(--delos-blue-900); }
 .ad-cta.br { right: 5.5cqi; bottom: 5.5cqi; }
-.closer .ad-cta.br { right: calc(5.5cqi + var(--pad)); }
-.campaign-row .ad-copy .btn { padding: 12px 18px; font-size: 15px; }
+.ad-cta.tl { left: 5.5cqi; top: 5.5cqi; }
+.ad-cta.tr { right: 5.5cqi; top: 5.5cqi; }
+.closer .ad-cta.tl { left: calc(5.5cqi + var(--pad)); }
+.closer .ad-cta.tr, .closer .ad-cta.br { right: calc(5.5cqi + var(--pad)); }
+.campaign-row .ad-cta { padding: 12px 18px; font-size: 15px; }
+
 .ad-photo.pos-eagle { object-position: 50% 0%; }
 .ad-photo.pos-pillars { object-position: 50% 35%; }
 .ad-photo.pos-mykonos { object-position: 50% 60%; }
