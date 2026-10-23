@@ -198,6 +198,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 .opener-placeholder p { margin: 0; max-width: 18em; }
 .pos-labyrinth { object-position: 50% 45%; }
 .pos-sisyphus { object-position: 62% 50%; }
+.pos-at-work { object-position: 50% 28%; }
 
 /* Footer */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 64px 0 48px; font-size: var(--t-small); }
