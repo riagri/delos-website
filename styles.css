@@ -187,6 +187,7 @@ a.card:hover .card-hint, a.card:focus-visible .card-hint { opacity: 1; transform
 .quotes blockquote p::after { content: "\201D"; }
 .quotes figcaption { font-size: var(--t-small); color: var(--slate-500); }
 .more-reviews { margin: 40px 0 0; }
+.more-reviews .rating { display: block; margin-bottom: 8px; color: var(--slate); }
 
 /* Contact */
 .contact-list { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--slate-200); }
