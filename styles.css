@@ -215,14 +215,14 @@ a.card:hover .card-hint, a.card:focus-visible .card-hint { opacity: 1; transform
 .pos-dead-end { object-position: 50% 50%; }
 .section-photo { margin-top: 56px; }
 
-/* Footer: three even columns. Company and legal | Pages | Contact */
+/* Footer: three even columns. Company | Pages | Contact */
 .site-footer { background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
 .site-footer a { color: var(--pearl); text-decoration: none; }
 .site-footer a:hover { color: #F9B6DC; }
 .site-footer .logo img { height: 52px; }
 .footer-grid { display: grid; gap: 40px; }
 .footer-grid p { margin: 0 0 10px; }
-.footer-company { margin: 24px 0 16px !important; line-height: 1.6; }
+.footer-company { margin: 24px 0 0 !important; line-height: 1.6; }
 .nowrap { white-space: nowrap; }
 .footer-nav { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .social { list-style: none; margin: 8px 0 0 -10px; padding: 0; display: flex; gap: 2px; }
