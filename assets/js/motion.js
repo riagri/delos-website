@@ -19,6 +19,10 @@
     document.querySelectorAll('main h1, main h2').forEach(function (heading) {
       // Leave the privacy notice still.
       if (heading.closest('.legal')) { gsap.set(heading, { autoAlpha: 1 }); return; }
+      if (heading.classList.contains('no-split')) {
+        gsap.fromTo(heading, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.9, delay: 0.5, ease: 'power3.out' });
+        return;
+      }
 
       var split = SplitText.create(heading, { type: 'words', tag: 'span' });
       var pink = split.words.filter(function (w) { return w.closest('.dot'); });
