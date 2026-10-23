@@ -53,6 +53,7 @@ One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.x
 - Socials (footer logos, plain, pink on hover, no underlines): LinkedIn https://www.linkedin.com/in/mariagripari/, Instagram https://www.instagram.com/delosrecruitment, Facebook https://www.facebook.com/delosrecruitment, TikTok https://www.tiktok.com/@delosrecruitment, X https://x.com/delos_rec, Google reviews https://share.google/tXGXv0by0SHzzuIAu
 - Footer: logo, page links, email, phone, Book a call, social logos, privacy notice, "Delos Recruitment Ltd. Registered in England and Wales, company number 16163283." No tagline in the footer.
 - Header: "Book a call" button linking to Contact.
+- Calls to action: one action per page, shown at most twice (once at the top, once at the close), plus the header button. No secondary "Get in touch" buttons beside the main one. Mid-page images are statements without buttons; only the closing image carries the button. Home: Get in touch (hero, closing band). Hiring: Book a client call (hero, pillars). Careers: Book a candidate call (hero, Sisyphus). Contact: client and candidate booking buttons only.
 
 ## Hosting
 
