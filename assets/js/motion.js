@@ -1,4 +1,4 @@
-/* Smooth scrolling (Lenis) and headline reveals (GSAP + SplitText).
+/* Smooth scrolling (Lenis), headline reveals (GSAP + SplitText) and story photo reveals.
    Does nothing if the visitor prefers reduced motion. */
 (function () {
   var root = document.documentElement;
@@ -38,52 +38,32 @@
         ScrollTrigger.create({ trigger: heading, start: 'top 85%', once: true, onEnter: function () { tl.play(); } });
       }
     });
-    // Campaign images: the statement or question lands first,
-    // then the answer follows a beat later as you keep scrolling.
-    document.querySelectorAll('.ad').forEach(function (ad) {
-      var photo = ad.querySelector('.ad-photo');
-      var hl = ad.querySelector('.ad-hl');
-      var q = ad.querySelector('.ad-q');
-      var a = ad.querySelector('.ad-a');
-      var rule = ad.querySelector('.ad-rule');
-      var sub = ad.querySelector('.ad-sub');
+    // Stories: the photo opens like a blind being raised, settles as it opens, then drifts
+    // gently with the scroll. The headline lands (above), then the words beneath it follow.
+    document.querySelectorAll('.story').forEach(function (story, i) {
+      var frame = story.querySelector('.story-photo');
+      var img = frame.querySelector('img');
+      var rest = story.querySelectorAll('.story-body > :not(h1):not(h2)');
+      var atTop = story.getBoundingClientRect().top < window.innerHeight;
 
-      // Slow drift on the photo, tied to scroll.
-      gsap.fromTo(photo, { scale: 1.08 }, {
-        scale: 1, ease: 'none',
-        scrollTrigger: { trigger: ad, start: 'top bottom', end: 'bottom top', scrub: true }
-      });
-
-      var first = SplitText.create(q || hl, { type: 'words', tag: 'span' }).words;
-      var second = [];
-      if (a) second = second.concat(SplitText.create(a, { type: 'words', tag: 'span' }).words);
-      if (rule) second.push(rule);
-      if (sub) second.push(sub);
-
-      gsap.set(first, { yPercent: 50, autoAlpha: 0 });
-      if (second.length) gsap.set(second, { y: 14, autoAlpha: 0 });
-
-      ScrollTrigger.create({
-        trigger: ad, start: 'top 72%', once: true,
-        onEnter: function () {
-          gsap.to(first, { yPercent: 0, autoAlpha: 1, duration: 0.9, ease: 'power3.out', stagger: 0.06 });
-        }
-      });
-      if (second.length) {
-        ScrollTrigger.create({
-          trigger: ad, start: 'top 45%', once: true,
-          onEnter: function () {
-            gsap.to(second, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', stagger: 0.12, delay: 0.35 });
-          }
-        });
-        // If the image sits too low on the page to scroll that far, show the answer anyway.
-        ScrollTrigger.create({
-          trigger: ad, start: 'bottom bottom', once: true,
-          onEnter: function () {
-            gsap.to(second, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', stagger: 0.12, delay: 1.1 });
-          }
-        });
+      var open = gsap.timeline({ paused: true });
+      open.to(frame, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.2, ease: 'expo.out' })
+          .fromTo(img, { scale: 1.14 }, { scale: 1.07, duration: 1.6, ease: 'expo.out' }, 0);
+      if (rest.length) {
+        open.fromTo(rest, { y: 16, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', stagger: 0.08 }, 0.55);
       }
+
+      if (atTop) {
+        open.delay(0.1).play();
+      } else {
+        ScrollTrigger.create({ trigger: story, start: 'top 80%', once: true, onEnter: function () { open.play(); } });
+      }
+
+      // Drift: the photo moves a little slower than the page.
+      gsap.fromTo(img, { yPercent: -2 }, {
+        yPercent: 2, ease: 'none',
+        scrollTrigger: { trigger: frame, start: 'top bottom', end: 'bottom top', scrub: true }
+      });
     });
 
     root.classList.add('motion-ready');
