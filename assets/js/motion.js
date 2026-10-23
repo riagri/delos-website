@@ -1,4 +1,4 @@
-/* Smooth scrolling (Lenis), headline reveals (GSAP + SplitText) and story photo reveals.
+/* Smooth scrolling (Lenis), headline reveals (GSAP + SplitText) and opener photo reveals.
    Does nothing if the visitor prefers reduced motion. */
 (function () {
   var root = document.documentElement;
@@ -38,12 +38,12 @@
         ScrollTrigger.create({ trigger: heading, start: 'top 85%', once: true, onEnter: function () { tl.play(); } });
       }
     });
-    // Stories: the photo opens like a blind being raised, settles as it opens, then drifts
+    // Openers: the photo opens like a blind being raised, settles as it opens, then drifts
     // gently with the scroll. The headline lands (above), then the words beneath it follow.
-    document.querySelectorAll('.story').forEach(function (story, i) {
-      var frame = story.querySelector('.story-photo');
-      var img = frame.querySelector('img');
-      var rest = story.querySelectorAll('.story-body > :not(h1):not(h2)');
+    document.querySelectorAll('.opener').forEach(function (story, i) {
+      var frame = story.querySelector('.opener-photo');
+      var img = frame.querySelector('img') || frame;
+      var rest = story.querySelectorAll('.opener-inner > :not(h1)');
       var atTop = story.getBoundingClientRect().top < window.innerHeight;
 
       var open = gsap.timeline({ paused: true });
