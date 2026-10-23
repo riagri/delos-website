@@ -38,6 +38,54 @@
         ScrollTrigger.create({ trigger: heading, start: 'top 85%', once: true, onEnter: function () { tl.play(); } });
       }
     });
+    // Campaign images: the statement or question lands first,
+    // then the answer follows a beat later as you keep scrolling.
+    document.querySelectorAll('.ad').forEach(function (ad) {
+      var photo = ad.querySelector('.ad-photo');
+      var hl = ad.querySelector('.ad-hl');
+      var q = ad.querySelector('.ad-q');
+      var a = ad.querySelector('.ad-a');
+      var rule = ad.querySelector('.ad-rule');
+      var sub = ad.querySelector('.ad-sub');
+
+      // Slow drift on the photo, tied to scroll.
+      gsap.fromTo(photo, { scale: 1.08 }, {
+        scale: 1, ease: 'none',
+        scrollTrigger: { trigger: ad, start: 'top bottom', end: 'bottom top', scrub: true }
+      });
+
+      var first = SplitText.create(q || hl, { type: 'words', tag: 'span' }).words;
+      var second = [];
+      if (a) second = second.concat(SplitText.create(a, { type: 'words', tag: 'span' }).words);
+      if (rule) second.push(rule);
+      if (sub) second.push(sub);
+
+      gsap.set(first, { yPercent: 50, autoAlpha: 0 });
+      if (second.length) gsap.set(second, { y: 14, autoAlpha: 0 });
+
+      ScrollTrigger.create({
+        trigger: ad, start: 'top 72%', once: true,
+        onEnter: function () {
+          gsap.to(first, { yPercent: 0, autoAlpha: 1, duration: 0.9, ease: 'power3.out', stagger: 0.06 });
+        }
+      });
+      if (second.length) {
+        ScrollTrigger.create({
+          trigger: ad, start: 'top 45%', once: true,
+          onEnter: function () {
+            gsap.to(second, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', stagger: 0.12, delay: 0.35 });
+          }
+        });
+        // If the image sits too low on the page to scroll that far, show the answer anyway.
+        ScrollTrigger.create({
+          trigger: ad, start: 'bottom bottom', once: true,
+          onEnter: function () {
+            gsap.to(second, { y: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out', stagger: 0.12, delay: 1.1 });
+          }
+        });
+      }
+    });
+
     root.classList.add('motion-ready');
   }
 
