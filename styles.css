@@ -217,8 +217,9 @@ a.card:hover h3 { color: var(--delos-blue); }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
 .ph-crossroads { --ts: 34px; }
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
-.ph-umbrella { --ts: 44px; }
-.pos-umbrella { object-position: 50% 30%; }
+.ph-bridge { --ts: 28px; }
+.ph-bridge .photo-title { top: 18px; bottom: auto; }
+.pos-bridge { object-position: 30% 0%; }
 .ph-dead-end .photo-title { left: auto; right: var(--inset); top: var(--inset); bottom: auto; text-align: right; }
 .pos-labyrinth { object-position: 50% 6%; }
 .pos-pillars { object-position: 0% 60%; }
@@ -242,8 +243,10 @@ a.card:hover h3 { color: var(--delos-blue); }
   .pos-sisyphus { object-position: 62% 50%; }
   .pos-plane { object-position: 50% 50%; }
   .pos-ships { object-position: 50% 84%; }
-  .ph-umbrella { --ts: clamp(56px, 7vw, 100px); }
-  .pos-umbrella { object-position: 50% 44%; }
+  .ph-bridge { --ts: clamp(40px, 4.4vw, 60px); }
+  .ph-bridge .photo-title { top: 36px; white-space: nowrap; }
+  .br-m { display: none; }
+  .pos-bridge { object-position: 50% 0%; }
 }
 .opener-text { padding: 0 var(--pad); }
 .opener-inner { max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; padding: 40px 0 0; }
