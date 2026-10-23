@@ -211,7 +211,7 @@ a.card:hover .card-hint, a.card:focus-visible .card-hint { opacity: 1; transform
 .pos-pillars { object-position: 40% 50%; }
 .pos-ships { object-position: 20% 50%; }
 .pos-crossroads { object-position: 50% 50%; }
-.pos-eagle { object-position: 46% 45%; }
+.pos-plane { object-position: 54% 58%; }
 .pos-dead-end { object-position: 50% 50%; }
 .section-photo { margin-top: 56px; }
 
