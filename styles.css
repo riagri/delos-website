@@ -216,7 +216,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 
 /* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
 .ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 57%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; } /* the only exception: the maze's sky is narrow on phones */
-.ph-pillars .photo-title { top: 50%; bottom: auto; transform: translateY(-50%); left: 20px; font-size: 26px; } /* caryatids: centred in the sky on the left; narrow sky on phones */
+.ph-pillars .photo-title { top: var(--inset); bottom: auto; transform: none; } /* caryatids: in the open sky top left */
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
@@ -225,7 +225,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .pos-bridge { object-position: 30% 0%; }
 .ph-404 .photo-title { top: var(--inset); bottom: auto; }
 .pos-labyrinth { object-position: 50% 6%; }
-.pos-pillars { object-position: 0% 60%; }
+.pos-pillars { object-position: 0% 0%; }
 .pos-sisyphus { object-position: 30% 50%; }
 .pos-plane { object-position: 88% 50%; }
 .pos-crossroads { object-position: 50% 50%; }
@@ -236,10 +236,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
   .ph-labyrinth .photo-title { left: 52%; top: 5%; }
   .ph-sisyphus .photo-title { top: 50%; transform: translateY(-50%); max-width: none; }
   .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
-  .ph-pillars .photo-title { bottom: auto; top: 50%; transform: translateY(-50%); }
-  .ph-pillars img { width: 172%; max-width: none; height: 172%; margin-top: -30%; } /* closer crop: the open sky fills the left half for the headline */
   .pos-labyrinth { object-position: 50% 26%; }
-  .pos-pillars { object-position: 100% 50%; }
   .pos-sisyphus { object-position: 62% 50%; }
   .pos-plane { object-position: 50% 50%; }
   .pos-ships { object-position: 50% 84%; }
@@ -326,8 +323,8 @@ html.lenis, html.lenis body { height: auto; }
   .opener-photo img { width: 100%; height: 100%; margin: 0; }
   .ph-labyrinth .photo-title { left: 55%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: var(--t-display); }
   .pos-labyrinth { object-position: 50% 12%; }
-  .pos-pillars { object-position: 0% 50%; }
-  .ph-pillars .photo-title { top: 50%; bottom: auto; transform: translateY(-50%); max-width: 6em; left: 36px; font-size: var(--t-display); }
+  .pos-pillars { object-position: 0% 0%; }
+  .ph-pillars .photo-title { top: 22px; left: 28px; bottom: auto; transform: none; max-width: none; font-size: clamp(30px, 2.6vw, 38px); }
   .pos-sisyphus { object-position: 0% 50%; }
   .ph-sisyphus .photo-title { max-width: none; top: 5%; transform: none; }
   .pos-bridge { object-position: 50% 0%; }
@@ -356,10 +353,14 @@ html.lenis, html.lenis body { height: auto; }
   .opener-inner .actions, .opener-inner .chips { justify-content: flex-start; }
 }
 .chips { gap: 4px 16px; }
-.card-photo .pos-pillars { object-position: 0% 50% !important; } /* card: open sky on the left for the hover headline */
+.card-photo .pos-pillars { object-position: 0% 0% !important; } /* card: open sky top left for the hover headline */
+.card-photo:has(.pos-pillars) .card-hint { top: 14px; left: 18px; bottom: auto; transform: translateY(8px); max-width: 12em; }
+a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .card-photo:has(.pos-pillars) .card-hint { transform: none; }
+@media (hover: none) { .card-photo:has(.pos-pillars) .card-hint { transform: none; } }
 
 /* Privacy notice: plain reading column, headings full width */
 .legal h2, .wrap.narrow.legal > h2 { max-width: none; grid-column: auto; grid-row: auto; margin: 1.6em 0 0.4em; }
 .legal h1 { margin-bottom: 0.4em; }
 /* Phones: card headlines kept inside the open sky */
 @media (max-width: 759px) { .card-hint { max-width: 6em; font-size: 21px; } .card-hint:not(.ink) { max-width: 5.2em; } }
+@media (max-width: 759px) { .card-photo:has(.pos-pillars) .card-hint { max-width: 11em; font-size: 18px; } }
