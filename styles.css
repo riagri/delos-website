@@ -337,7 +337,7 @@ html.lenis, html.lenis body { height: auto; }
 }
 .chips { gap: 4px 16px; }
 .card-photo .pos-pillars { object-position: 0% 0% !important; } /* card: open sky top left for the hover headline */
-.card-photo:has(.pos-pillars) .card-hint { top: 14px; left: 18px; bottom: auto; transform: translateY(8px); max-width: 12em; }
+.card-photo:has(.pos-pillars) .card-hint { top: 14px; left: 18px; bottom: auto; transform: translateY(8px); max-width: 6.6em; }
 a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .card-photo:has(.pos-pillars) .card-hint { transform: none; }
 @media (hover: none) { .card-photo:has(.pos-pillars) .card-hint { transform: none; } }
 
@@ -346,7 +346,7 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 .legal h1 { margin-bottom: 0.4em; }
 /* Phones: card headlines kept inside the open sky */
 @media (max-width: 759px) { .card-hint { max-width: 6em; font-size: 21px; } .card-hint:not(.ink) { max-width: 5.2em; } }
-@media (max-width: 759px) { .card-photo:has(.pos-pillars) .card-hint { max-width: 11em; font-size: 18px; } }
+@media (max-width: 759px) { .card-photo:has(.pos-pillars) .card-hint { max-width: 6.6em; font-size: 16px; top: 10px; left: 14px; } }
 @media (min-width: 960px) { .ph-ships .photo-title { left: auto; right: var(--inset); text-align: right; } }
 .ph-crowd .photo-title { top: var(--inset); bottom: auto; } /* top left, on the bright ceiling */
 .pos-crowd { object-position: 50% 62%; }
