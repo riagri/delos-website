@@ -357,3 +357,9 @@ html.lenis, html.lenis body { height: auto; }
 }
 .chips { gap: 4px 16px; }
 .card-photo .pos-pillars { object-position: 0% 50% !important; } /* card: open sky on the left for the hover headline */
+
+/* Privacy notice: plain reading column, headings full width */
+.legal h2, .wrap.narrow.legal > h2 { max-width: none; grid-column: auto; grid-row: auto; margin: 1.6em 0 0.4em; }
+.legal h1 { margin-bottom: 0.4em; }
+/* Phones: card headlines kept inside the open sky */
+@media (max-width: 759px) { .card-hint { max-width: 6em; font-size: 21px; } .card-hint:not(.ink) { max-width: 5.2em; } }
