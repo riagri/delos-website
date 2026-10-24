@@ -373,3 +373,4 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 .ph-crossroads .photo-title { font-size: clamp(44px, 6vw, 72px); line-height: 1; }
 .ph-crossroads img { scale: 1.75; } /* zoom in so the empty square where the crossings meet frames the headline */
 @media (max-width: 759px) { .ph-crossroads img { scale: 2.6; } .ph-crossroads .photo-title { font-size: 40px; } } /* phones: zoom further so the headline sits inside the open grey square */
+@media (min-width: 960px) { .quotes { grid-template-columns: repeat(3, 1fr); gap: 48px; } } /* three reviews side by side */
