@@ -215,7 +215,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .photo-title.hl span { background: var(--pink); color: var(--white); padding: 0 0.16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
-.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 57%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; } /* the only exception: the maze's sky is narrow on phones */
+.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 61%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; } /* the only exception: the maze's sky is narrow on phones */
 .ph-pillars .photo-title { top: var(--inset); bottom: auto; transform: none; } /* caryatids: in the open sky top left */
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; left: auto; right: var(--inset); text-align: right; } /* top right, clear of the moon */
@@ -233,7 +233,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .pos-404 { object-position: 50% 20%; }
 @media (min-width: 760px) { .pos-404 { object-position: 50% 42%; } }
 @media (min-width: 760px) {
-  .ph-labyrinth .photo-title { left: 52%; top: 5%; }
+  .ph-labyrinth .photo-title { left: 60%; top: 5%; }
   .ph-sisyphus .photo-title { top: 50%; transform: translateY(-50%); max-width: none; }
   .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
   .pos-labyrinth { object-position: 50% 26%; }
@@ -319,7 +319,7 @@ html.lenis, html.lenis body { height: auto; }
   /* every photo re-framed for the square, headline in its open space, one size */
   .photo-title { font-size: var(--t-display); left: var(--inset); right: auto; top: var(--inset); bottom: auto; transform: none; text-align: left; width: auto; max-width: 9em; white-space: normal; }
   .opener-photo img { width: 100%; height: 100%; margin: 0; }
-  .ph-labyrinth .photo-title { left: 55%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: var(--t-display); }
+  .ph-labyrinth .photo-title { left: 61%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: var(--t-display); }
   .pos-labyrinth { object-position: 50% 12%; }
   .pos-pillars { object-position: 0% 0%; }
   .ph-pillars .photo-title { top: 22px; left: 28px; bottom: auto; transform: none; max-width: none; font-size: clamp(30px, 2.6vw, 38px); }
