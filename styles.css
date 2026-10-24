@@ -220,9 +220,6 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; left: auto; right: var(--inset); text-align: right; } /* top right, clear of the moon */
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
-.ph-bridge .photo-title { top: var(--inset); bottom: auto; }
-.ph-bridge img { width: 150%; height: 150%; max-width: none; margin-left: -25%; } /* crop in from the top: more sky, less road */
-.pos-bridge { object-position: 30% 0%; }
 .ph-404 .photo-title { top: var(--inset); bottom: auto; }
 .pos-labyrinth { object-position: 50% 6%; }
 .pos-pillars { object-position: 0% 0%; }
@@ -238,9 +235,6 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
   .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
   .pos-labyrinth { object-position: 50% 26%; }
   .pos-sisyphus { object-position: 62% 50%; }
-  .ph-bridge img { width: 145%; height: 145%; margin-left: -22%; }
-  .ph-bridge .photo-title { top: 28px; }
-  .pos-bridge { object-position: 50% 0%; }
 }
 .opener-text { padding: 0 var(--pad); }
 .opener-inner { max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; padding: 40px 0 0; }
@@ -325,9 +319,6 @@ html.lenis, html.lenis body { height: auto; }
   .ph-pillars .photo-title { top: 22px; left: 28px; bottom: auto; transform: none; max-width: none; font-size: clamp(30px, 2.6vw, 38px); }
   .pos-sisyphus { object-position: 0% 50%; }
   .ph-sisyphus .photo-title { max-width: none; top: 5%; transform: none; }
-  .pos-bridge { object-position: 50% 0%; }
-  .ph-bridge img { width: 160%; height: 160%; margin-left: -18%; }
-  .ph-bridge .photo-title { max-width: none; top: 4%; }
   .pos-plane { object-position: 50% 62%; }
   .ph-plane .photo-title { top: auto; bottom: var(--inset); }
   .pos-ships { object-position: 66% 50%; }
@@ -363,3 +354,6 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 @media (max-width: 759px) { .card-hint { max-width: 6em; font-size: 21px; } .card-hint:not(.ink) { max-width: 5.2em; } }
 @media (max-width: 759px) { .card-photo:has(.pos-pillars) .card-hint { max-width: 11em; font-size: 18px; } }
 @media (min-width: 960px) { .ph-ships .photo-title { left: auto; right: var(--inset); text-align: right; } }
+.ph-crowd .photo-title { top: var(--inset); bottom: auto; } /* top left, on the bright ceiling */
+.pos-crowd { object-position: 50% 62%; }
+@media (min-width: 960px) { .pos-crowd { object-position: 50% 60%; } .ph-crowd .photo-title { max-width: none; } }
