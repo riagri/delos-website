@@ -336,6 +336,11 @@ html.lenis, html.lenis body { height: auto; }
   .opener-inner .actions, .opener-inner .chips { justify-content: flex-start; }
 }
 .chips { gap: 4px 16px; }
+/* Home roles: a tidy three-by-two grid so the list never wraps raggedly */
+.opener-inner .roles-label { margin: 0 0 8px; }
+.chips.roles { display: grid; grid-template-columns: repeat(3, max-content); gap: 6px 28px; margin: 0; }
+.chips.roles li { font-size: var(--t-body); }
+@media (max-width: 559px) { .chips.roles { grid-template-columns: repeat(2, max-content); } }
 .card-photo .pos-pillars { object-position: 0% 0% !important; } /* card: open sky top left for the hover headline */
 .card-photo:has(.pos-pillars) .card-hint { top: 14px; left: 18px; bottom: auto; transform: translateY(8px); max-width: 6.6em; }
 a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .card-photo:has(.pos-pillars) .card-hint { transform: none; }
