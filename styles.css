@@ -218,7 +218,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 57%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; } /* the only exception: the maze's sky is narrow on phones */
 .ph-pillars .photo-title { top: var(--inset); bottom: auto; transform: none; } /* caryatids: in the open sky top left */
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
-.ph-ships .photo-title { top: var(--inset); bottom: auto; }
+.ph-ships .photo-title { top: var(--inset); bottom: auto; left: auto; right: var(--inset); text-align: right; } /* top right, clear of the moon */
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
 .ph-bridge .photo-title { top: var(--inset); bottom: auto; }
 .ph-bridge img { width: 150%; height: 150%; max-width: none; margin-left: -25%; } /* crop in from the top: more sky, less road */
@@ -227,9 +227,9 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .pos-labyrinth { object-position: 50% 6%; }
 .pos-pillars { object-position: 0% 0%; }
 .pos-sisyphus { object-position: 30% 50%; }
-.pos-plane { object-position: 88% 50%; }
+.pos-plane { object-position: 50% 58%; }
 .pos-crossroads { object-position: 50% 50%; }
-.pos-ships { object-position: 50% 60%; }
+.pos-ships { object-position: 64% 50%; }
 .pos-404 { object-position: 50% 20%; }
 @media (min-width: 760px) { .pos-404 { object-position: 50% 42%; } }
 @media (min-width: 760px) {
@@ -238,8 +238,6 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
   .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
   .pos-labyrinth { object-position: 50% 26%; }
   .pos-sisyphus { object-position: 62% 50%; }
-  .pos-plane { object-position: 50% 50%; }
-  .pos-ships { object-position: 50% 84%; }
   .ph-bridge img { width: 145%; height: 145%; margin-left: -22%; }
   .ph-bridge .photo-title { top: 28px; }
   .pos-bridge { object-position: 50% 0%; }
@@ -330,9 +328,9 @@ html.lenis, html.lenis body { height: auto; }
   .pos-bridge { object-position: 50% 0%; }
   .ph-bridge img { width: 160%; height: 160%; margin-left: -18%; }
   .ph-bridge .photo-title { max-width: none; top: 4%; }
-  .pos-plane { object-position: 100% 50%; }
+  .pos-plane { object-position: 50% 62%; }
   .ph-plane .photo-title { top: auto; bottom: var(--inset); }
-  .pos-ships { object-position: 50% 62%; }
+  .pos-ships { object-position: 66% 50%; }
   .pos-404 { object-position: 50% 30%; }
 }
 
@@ -364,3 +362,4 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 /* Phones: card headlines kept inside the open sky */
 @media (max-width: 759px) { .card-hint { max-width: 6em; font-size: 21px; } .card-hint:not(.ink) { max-width: 5.2em; } }
 @media (max-width: 759px) { .card-photo:has(.pos-pillars) .card-hint { max-width: 11em; font-size: 18px; } }
+@media (min-width: 960px) { .ph-ships .photo-title { left: auto; right: var(--inset); text-align: right; } }
