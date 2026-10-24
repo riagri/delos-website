@@ -28,7 +28,7 @@
 
   /* One type scale for the whole site: five sizes, far apart */
   /* Four sizes for the whole site, nothing else */
-  --t-display: clamp(30px, 4vw, 54px);    /* headline: every photo headline and section title */
+  --t-display: clamp(30px, 3vw, 42px);    /* headline: every photo headline and section title */
   --t-heading: clamp(21px, 1.9vw, 25px);  /* statement: hooks, myths, quotes, card and step titles */
   --t-body: 18px;                         /* every paragraph */
   --t-small: 16px;                        /* labels, nav, buttons, footer: never smaller */
@@ -147,9 +147,16 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 a.card:hover { color: var(--slate); }
 a.card:hover .card-photo img { transform: scale(1.03); }
 a.card:hover h3 { color: var(--delos-blue); }
-.card-link { display: inline-block; margin-top: 16px; font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-a.card:hover .card-link { color: var(--delos-blue-900); }
-/* Each card carries its page's headline on the photo, as the page heroes do. */
+/* The page headline fades in on the card photo on hover (always shown on touch screens). White low, dark high. */
+.card-photo { position: relative; }
+.card-hint { position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; max-width: 9em; font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.15; letter-spacing: -0.005em; color: var(--white); opacity: 0; transform: translateY(8px); transition: opacity 300ms var(--ease), transform 300ms var(--ease); }
+.card-hint.ink { color: var(--slate); top: 22px; bottom: auto; }
+.card-hint:not(.ink) { left: 18px; bottom: auto; top: 50%; max-width: 5.6em; transform: translateY(calc(-50% + 8px)); }
+a.card:hover .card-hint:not(.ink), a.card:focus-visible .card-hint:not(.ink) { transform: translateY(-50%); }
+@media (hover: none) { .card-hint:not(.ink) { transform: translateY(-50%); } }
+a.card:hover .card-hint, a.card:focus-visible .card-hint { opacity: 1; transform: none; }
+@media (hover: none) { .card-hint { opacity: 1; transform: none; } }
+a.card:hover /* Each card carries its page's headline on the photo, as the page heroes do. */
 .card-photo { position: relative; }
 
 /* Steps */
@@ -208,8 +215,8 @@ a.card:hover .card-link { color: var(--delos-blue-900); }
 .photo-title.hl span { background: var(--pink); color: var(--white); padding: 0 0.16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
-.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 58%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; }
-.ph-pillars .photo-title { top: auto; bottom: var(--inset); } /* white headlines sit low, dark ones high */
+.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 57%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; } /* the only exception: the maze's sky is narrow on phones */
+.ph-pillars .photo-title { top: 50%; bottom: auto; transform: translateY(-50%); left: 20px; font-size: 26px; } /* caryatids: centred in the sky on the left; narrow sky on phones */
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
@@ -300,7 +307,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Magazine spread on wide screens: photo and words side by side, filling the width together.
    On phones everything stacks: photo, then words. */
-.hook { font-family: var(--font-body); font-weight: 400; font-size: clamp(21px, 1.9vw, 24px); line-height: 1.45; letter-spacing: 0; color: var(--slate); margin-bottom: 0.8em; }
+.hook { font-family: var(--font-body); font-weight: 400; font-size: var(--t-heading); line-height: 1.45; letter-spacing: 0; color: var(--slate); margin-bottom: 0.8em; }
 .opener-inner p:not(.hook) { color: var(--slate-500); }
 @media (min-width: 960px) {
   .opener { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; column-gap: clamp(40px, 5vw, 80px);
@@ -315,18 +322,18 @@ html.lenis, html.lenis body { height: auto; }
   .opener-photo { aspect-ratio: 1 / 1; }
   .opener-inner { max-width: 32em; }
   /* every photo re-framed for the square, headline in its open space, one size */
-  .photo-title { font-size: clamp(32px, 3.2vw, 46px); left: var(--inset); right: auto; top: var(--inset); bottom: auto; transform: none; text-align: left; width: auto; max-width: 9em; white-space: normal; }
+  .photo-title { font-size: var(--t-display); left: var(--inset); right: auto; top: var(--inset); bottom: auto; transform: none; text-align: left; width: auto; max-width: 9em; white-space: normal; }
   .opener-photo img { width: 100%; height: 100%; margin: 0; }
-  .ph-labyrinth .photo-title { left: 52%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: clamp(26px, 2.4vw, 34px); }
+  .ph-labyrinth .photo-title { left: 55%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: var(--t-display); }
   .pos-labyrinth { object-position: 50% 12%; }
   .pos-pillars { object-position: 0% 50%; }
-  .ph-pillars .photo-title { top: auto; bottom: var(--inset); transform: none; max-width: 5.5em; font-size: clamp(28px, 2.6vw, 38px); }
+  .ph-pillars .photo-title { top: 50%; bottom: auto; transform: translateY(-50%); max-width: 6em; left: 36px; font-size: var(--t-display); }
   .pos-sisyphus { object-position: 0% 50%; }
-  .ph-sisyphus .photo-title { max-width: none; font-size: clamp(26px, 2.4vw, 34px); top: 5%; transform: none; }
+  .ph-sisyphus .photo-title { max-width: none; top: 5%; transform: none; }
   .pos-bridge { object-position: 50% 0%; }
-  .ph-bridge img { width: 160%; height: 160%; margin-left: -30%; }
-  .ph-bridge .photo-title { max-width: none; white-space: nowrap; top: 4%; font-size: clamp(28px, 2.6vw, 38px); }
-  .pos-plane { object-position: 60% 50%; }
+  .ph-bridge img { width: 160%; height: 160%; margin-left: -18%; }
+  .ph-bridge .photo-title { max-width: none; top: 4%; }
+  .pos-plane { object-position: 100% 50%; }
   .ph-plane .photo-title { top: auto; bottom: var(--inset); }
   .pos-ships { object-position: 50% 62%; }
   .pos-404 { object-position: 50% 30%; }
@@ -349,3 +356,4 @@ html.lenis, html.lenis body { height: auto; }
   .opener-inner .actions, .opener-inner .chips { justify-content: flex-start; }
 }
 .chips { gap: 4px 16px; }
+.card-photo .pos-pillars { object-position: 0% 50% !important; } /* card: open sky on the left for the hover headline */
