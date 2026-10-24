@@ -44,7 +44,7 @@ Copy pass (23 Oct 2026, asked for by Maria): repetition removed so each idea has
 5. **Contact** (contact.html): client and candidate booking buttons (no embedded calendar, so the site sets no cookies), email and phone.
 6. **Privacy notice** (privacy.html): copied word for word from her Lawspeed privacy-notice.pdf.
 
-One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.xml, robots.txt and llms.txt support search and AI search.
+One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.xml, robots.txt and llms.txt support search and AI search. AI search (GEO, 24 Oct 2026): every page carries the EmploymentAgency record with sameAs (socials, Google reviews) and contactPoint; Home adds a FAQPage built from the five myths (keep it in step with the visible myths), Hiring and Careers add a Service record, About and Contact use AboutPage and ContactPage. llms.txt holds the key facts, process, myths and reviews word for word; update it whenever that copy changes. robots.txt welcomes AI crawlers. IndexNow key file is the 32-character .txt in the root: ping api.indexnow.org with changed URLs after big updates.
 
 ## Contact details
 
