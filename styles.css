@@ -292,7 +292,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Magazine spread on wide screens: photo and words side by side, filling the width together.
    On phones everything stacks: photo, then words. */
-.hook { font-family: var(--font-body); font-weight: 400; font-size: var(--t-heading); line-height: 1.45; letter-spacing: 0; color: var(--slate); margin-bottom: 0.8em; }
+.hook { font-family: var(--font-display); font-weight: 400; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.2; letter-spacing: -0.01em; color: var(--slate); margin-bottom: 0.8em; }
 .opener-inner p:not(.hook) { color: var(--slate); }
 @media (min-width: 960px) {
   .opener { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; column-gap: clamp(40px, 5vw, 80px);
