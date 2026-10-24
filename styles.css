@@ -147,6 +147,8 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 a.card:hover { color: var(--slate); }
 a.card:hover .card-photo img { transform: scale(1.03); }
 a.card:hover h3 { color: var(--delos-blue); }
+.card-link { display: inline-block; margin-top: 16px; font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a.card:hover .card-link { color: var(--delos-blue-900); }
 /* Each card carries its page's headline on the photo, as the page heroes do. */
 .card-photo { position: relative; }
 
