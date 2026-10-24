@@ -188,10 +188,10 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 /* Quotes */
 .quotes { display: grid; gap: 28px; margin-top: 40px; }
 .quotes figure { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--slate-200); }
-.quotes figure::before { content: "\201C"; display: block; font-family: var(--font-display); font-size: var(--t-display); line-height: 0.7; height: 30px; color: var(--pink); }
 .quotes blockquote { margin: 0; font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.25; color: var(--slate); }
 .quotes blockquote p { margin: 0 0 18px; }
-.quotes blockquote p::after { content: "\201D"; }
+.quotes blockquote p::before { content: "\201C"; color: var(--pink); }
+.quotes blockquote p::after { content: "\201D"; color: var(--pink); }
 .quotes figcaption { font-size: var(--t-small); color: var(--slate-500); }
 .more-reviews { margin: 40px 0 0; }
 
