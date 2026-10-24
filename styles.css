@@ -139,10 +139,10 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 
 /* Two paths */
 .paths { display: grid; gap: 32px; }
-.card { display: block; text-decoration: none; color: var(--slate); background: var(--white); border-radius: var(--radius-lg); overflow: hidden; padding: 0 0 32px; }
-.card h3 { margin: 28px 28px 0.35em; }
-.card p { margin: 0 28px; }
-.card-photo { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--slate-200); }
+.card { display: block; text-decoration: none; color: var(--slate); }
+.card h3 { margin: 24px 0 0.3em; }
+.card p { margin: 0; color: var(--slate-500); max-width: 30em; }
+.card-photo { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--slate-200); border-radius: var(--radius-lg); }
 .card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms var(--ease); }
 a.card:hover { color: var(--slate); }
 a.card:hover .card-photo img { transform: scale(1.03); }
@@ -178,8 +178,8 @@ a.card:hover h3 { color: var(--delos-blue); }
 
 /* Quotes */
 .quotes { display: grid; gap: 40px; margin-top: 40px; }
-.quotes figure { margin: 0; padding: 36px 32px 32px; background: var(--white); border-radius: var(--radius-lg); }
-.quotes figure::before { content: "\201C"; display: block; font-family: var(--font-display); font-size: var(--t-display); line-height: 0.6; height: 32px; color: var(--pink); }
+.quotes figure { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--slate-200); }
+.quotes figure::before { content: "\201C"; display: block; font-family: var(--font-display); font-size: var(--t-display); line-height: 0.7; height: 30px; color: var(--pink); }
 .quotes blockquote { margin: 0; font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.25; color: var(--slate); }
 .quotes blockquote p { margin: 0 0 18px; }
 .quotes blockquote p::after { content: "\201D"; }
@@ -206,7 +206,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 .photo-title.hl span { background: var(--pink); color: var(--white); padding: 0 0.16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
-.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 61%; transform: translateX(-50%); text-align: center; width: max-content; }
+.ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 58%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; }
 .ph-pillars .photo-title { top: var(--inset); bottom: auto; }
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
@@ -302,7 +302,7 @@ html.lenis, html.lenis body { height: auto; }
 .opener-inner p:not(.hook) { color: var(--slate-500); }
 @media (min-width: 960px) {
   .opener { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; column-gap: clamp(40px, 5vw, 80px);
-            max-width: var(--container); margin: 0 auto; padding: 40px var(--pad) 96px; }
+            max-width: var(--container); margin: 0 auto; padding: 40px var(--pad) 112px; }
   .opener-photo { width: 100%; max-width: none; margin: 0; aspect-ratio: 4 / 5; max-height: calc(100vh - 140px); min-height: 0; }
   .opener-text { padding: 0; }
   .opener-inner { padding: 0; max-width: 30em; margin: 0; }
@@ -318,7 +318,7 @@ html.lenis, html.lenis body { height: auto; }
   .ph-labyrinth .photo-title { left: 52%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: clamp(26px, 2.4vw, 34px); }
   .pos-labyrinth { object-position: 50% 12%; }
   .pos-pillars { object-position: 0% 50%; }
-  .ph-pillars .photo-title { top: 50%; transform: translateY(-50%); max-width: 6em; font-size: clamp(28px, 2.6vw, 38px); }
+  .ph-pillars .photo-title { top: var(--inset); transform: none; max-width: 5.5em; font-size: clamp(28px, 2.6vw, 38px); }
   .pos-sisyphus { object-position: 0% 50%; }
   .ph-sisyphus .photo-title { max-width: none; font-size: clamp(26px, 2.4vw, 34px); top: 5%; transform: none; }
   .pos-bridge { object-position: 50% 0%; }
@@ -333,7 +333,7 @@ html.lenis, html.lenis body { height: auto; }
 /* Below the spreads: every text section sits on the same two columns as the photo and text above
    (title in the photo column, content in the text column), with the same spacing everywhere. */
 @media (min-width: 960px) {
-  .section { padding: 120px 0; }
+  .section { padding: 112px 0; }
   .wrap.narrow, .wrap:has(> .myths) { max-width: var(--container); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: clamp(40px, 5vw, 80px); align-items: start; text-align: left; }
   .wrap.narrow > *, .wrap:has(> .myths) > * { grid-column: 2; margin-left: 0; margin-right: 0; max-width: 40em; }
   .wrap:has(> .myths) > .myths { max-width: none; }
