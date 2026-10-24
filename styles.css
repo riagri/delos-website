@@ -207,7 +207,7 @@ a.card:hover h3 { color: var(--delos-blue); }
 
 /* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
 .ph-labyrinth .photo-title { top: var(--inset); bottom: auto; left: 58%; transform: translateX(-50%); text-align: center; width: max-content; font-size: 26px; }
-.ph-pillars .photo-title { top: var(--inset); bottom: auto; }
+.ph-pillars .photo-title { top: auto; bottom: var(--inset); } /* white headlines sit low, dark ones high */
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 6.6em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; }
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
@@ -318,7 +318,7 @@ html.lenis, html.lenis body { height: auto; }
   .ph-labyrinth .photo-title { left: 52%; transform: translateX(-50%); text-align: center; width: max-content; max-width: none; top: 4%; font-size: clamp(26px, 2.4vw, 34px); }
   .pos-labyrinth { object-position: 50% 12%; }
   .pos-pillars { object-position: 0% 50%; }
-  .ph-pillars .photo-title { top: var(--inset); transform: none; max-width: 5.5em; font-size: clamp(28px, 2.6vw, 38px); }
+  .ph-pillars .photo-title { top: auto; bottom: var(--inset); transform: none; max-width: 5.5em; font-size: clamp(28px, 2.6vw, 38px); }
   .pos-sisyphus { object-position: 0% 50%; }
   .ph-sisyphus .photo-title { max-width: none; font-size: clamp(26px, 2.4vw, 34px); top: 5%; transform: none; }
   .pos-bridge { object-position: 50% 0%; }
