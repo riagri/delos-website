@@ -66,3 +66,4 @@ One shared header and footer. Mobile first. Structured data (JSON-LD), sitemap.x
 - GitHub Pages from the main branch, root folder.
 - Custom domain: delosrecruitment.co.uk (DNS on IONOS). Set via GitHub Pages settings; never touch email/MX records.
 - No secrets, keys or private data ever go in this repo: it is public.
+- `assets/email/` holds the images for Maria's Gmail signature (pink DELOS logo, Delos Blue social icons). Gmail loads them from these URLs, so never rename, move or delete them. WiseStamp is no longer used.
