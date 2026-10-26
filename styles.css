@@ -209,10 +209,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .opener-photo img { width: 100%; height: 100%; object-fit: cover; }
 .photo-title { position: absolute; z-index: 1; margin: 0; font-size: var(--t-display); line-height: 1.04; letter-spacing: -0.02em; left: var(--inset); right: auto; top: auto; bottom: var(--inset); color: var(--white); }
 .photo-title.ink { color: var(--slate); }
-.opener-photo.shade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(17, 18, 22, 0.7) 0%, rgba(17, 18, 22, 0.35) 34%, rgba(17, 18, 22, 0) 60%); pointer-events: none; }
 /* Pink highlight bars: only where a photo has no open space (the crossroads), so the line still reads. */
-.photo-title.hl { line-height: 1.28; }
-.photo-title.hl span { background: var(--pink); color: var(--white); padding: 0 0.16em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* Per photo, mobile first then desktop. Each headline is set as large as its open space allows. */
 .ph-pillars .photo-title { top: var(--inset); bottom: auto; transform: none; } /* caryatids: in the open sky top left */
