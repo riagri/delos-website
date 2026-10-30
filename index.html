@@ -22,12 +22,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://delosrecruitment.co.uk/assets/share/home.jpg">
   <meta name="theme-color" content="#0053BF">
+  <link rel="icon" href="favicon.ico?v=pink" sizes="48x48">
   <link rel="icon" href="assets/favicon.svg?v=pink" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png?v=pink" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=pink">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="fonts/Gloock-Regular.woff" as="font" type="font/woff" crossorigin>
-  <script src="assets/js/motion-init.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
   <script type="application/ld+json">
 [
  {
@@ -39,7 +41,7 @@
   "url": "https://delosrecruitment.co.uk/",
   "logo": "https://delosrecruitment.co.uk/assets/logo-square.png",
   "image": "https://delosrecruitment.co.uk/assets/social-preview.png",
-  "slogan": "Everything you have heard about recruitment is a myth.",
+  "slogan": "Recruitment, without the myths.",
   "description": "We're a specialist Rec2Rec covering all the roles that make a recruitment business work. That includes trainees, recruiters, sales, marketing, operations, and admin. Anything that helps a recruitment business grow, we recruit for it.",
   "email": "hello@delosrecruitment.co.uk",
   "telephone": "+447537142925",
@@ -129,7 +131,7 @@
     "name": "Is it true that a recruiter just fills the vacancy?",
     "acceptedAnswer": {
      "@type": "Answer",
-     "text": "We learn your business, not just the vacancy, and what the role will mean for it now and later. We don't place people to fill a gap. We place them so your business and your new hire both grow."
+     "text": "Before we search, we learn how your business runs and where you want to take it, so every hire supports your long-term vision as well as the role in front of you."
     }
    },
    {
@@ -137,15 +139,15 @@
     "name": "Is it true that your CV says it all?",
     "acceptedAnswer": {
      "@type": "Answer",
-     "text": "You are more than two pages of experience, and what you want is more than a job description. We take the time to understand both."
+     "text": "No CV can say it all. That's why we start with a conversation, to get to know you and understand what you're really looking for."
     }
    },
    {
     "@type": "Question",
-    "name": "Is it true that once the CV is sent, the recruiter disappears?",
+    "name": "Is it true that you have to be job hunting to talk to a recruiter?",
     "acceptedAnswer": {
      "@type": "Answer",
-     "text": "We prepare every candidate for every interview, keep clients updated throughout, and stay in touch with both long after the start date."
+     "text": "Some of the best moves start with a conversation before you're even looking. Talking to us doesn't commit you to anything."
     }
    },
    {
@@ -161,7 +163,7 @@
     "name": "Is it true that recruitment is just a stop gap?",
     "acceptedAnswer": {
      "@type": "Answer",
-     "text": "For plenty of people it becomes a long career. Whether it does for you depends on how you start, so we make sure you know what the job really involves before you say yes."
+     "text": "It can be a career for life. We're honest about what the job really involves before you say yes, so you start somewhere you can grow."
     }
    }
   ]
@@ -189,108 +191,116 @@
   </header>
 
   <main id="main">
-    <section class="opener" aria-labelledby="home-title">
-      <div class="opener-photo ph-labyrinth">
-        <img class="pos-labyrinth" src="assets/img/labyrinth-full.jpg" srcset="assets/img/labyrinth-800.jpg 800w, assets/img/labyrinth-full.jpg 1200w" sizes="(min-width: 960px) 620px, 100vw" alt="A woman with a backpack walks between tall hedges in a maze" width="1200" height="2000" decoding="async">
-        <h1 class="photo-title ink" id="home-title">Lost in the<br> labyrinth?<br> We'll guide<br> you through.</h1>
-      </div>
-      <div class="opener-text">
-        <div class="opener-inner">
-          <p class="hook">When every role and every recruiter starts to look the same, it's hard to know which way to turn.</p>
-          <p class="lede">We've worked inside recruitment businesses ourselves, so we can guide businesses and candidates alike to the right place.</p>
-          <p class="roles-label">We recruit for:</p>
-          <ul class="chips roles" aria-label="Roles we recruit for">
-          <li>Trainees</li><li>Recruiters</li><li>Sales</li><li>Marketing</li><li>Operations</li><li>Administration</li>
+    <section class="hero" aria-labelledby="home-title">
+      <div class="wrap spread">
+        <figure>
+          <div class="frame ph-labyrinth">
+            <img class="pos-labyrinth" src="assets/img/labyrinth-full.jpg" srcset="assets/img/labyrinth-800.jpg 800w, assets/img/labyrinth-full.jpg 1200w" sizes="(min-width: 960px) 620px, 100vw" alt="A woman with a backpack walks between tall hedges in a maze" width="1200" height="2000" fetchpriority="high" decoding="async">
+            <h1 class="photo-title ink" id="home-title">Lost in the<br> labyrinth?<br> We'll guide<br> you through.</h1>
+          </div>
+          <details class="lore"><summary>The labyrinth</summary><p>Ariadne gave Theseus a ball of thread so he could find his way back out of the labyrinth.</p></details>
+        </figure>
+        <div class="words">
+          <p class="hook">When every role and every agency starts to look the same, it's hard to know which way to turn.</p>
+          <p>We're a specialist Rec2Rec agency. For recruitment businesses, we recruit:</p>
+          <ul class="roles">
+            <li>Trainee recruiters</li><li>Experienced recruiters</li><li>Sales</li><li>Marketing</li><li>Operations</li><li>Administration</li>
           </ul>
-          <div class="actions"><a class="btn" href="contact.html">Get in touch</a></div>
+          <a class="btn" href="contact.html">Get in touch</a>
         </div>
       </div>
     </section>
 
-    <section class="section white" aria-labelledby="myths-title">
-      <div class="wrap">
-        <h2 id="myths-title">Everything you have heard about recruitment is a <span class="dot">myth.</span></h2>
-        <ol class="myths">
-          <li>
-            <details>
-              <summary><span class="label">Myth</span><span class="myth">A recruiter just fills the vacancy.</span><span class="reveal" aria-hidden="true"></span></summary>
-              <p class="truth"><span class="label">Truth</span>We learn your business, not just the vacancy, and what the role will mean for it now and later. We don't place people to fill a gap. We place them so your business and your new hire both grow.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary><span class="label">Myth</span><span class="myth">Your CV says it all.</span><span class="reveal" aria-hidden="true"></span></summary>
-              <p class="truth"><span class="label">Truth</span>You are more than two pages of experience, and what you want is more than a job description. We take the time to understand both.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary><span class="label">Myth</span><span class="myth">Once the CV is sent, the recruiter disappears.</span><span class="reveal" aria-hidden="true"></span></summary>
-              <p class="truth"><span class="label">Truth</span>We prepare every candidate for every interview, keep clients updated throughout, and stay in touch with both long after the start date.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary><span class="label">Myth</span><span class="myth">You need experience to become a recruiter.</span><span class="reveal" aria-hidden="true"></span></summary>
-              <p class="truth"><span class="label">Truth</span>You don't. If you have the motivation and the skills to succeed, our trainee roles are made for you.</p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary><span class="label">Myth</span><span class="myth">Recruitment is just a stop gap.</span><span class="reveal" aria-hidden="true"></span></summary>
-              <p class="truth"><span class="label">Truth</span>For plenty of people it becomes a long career. Whether it does for you depends on how you start, so we make sure you know what the job really involves before you say yes.</p>
-            </details>
-          </li>
-        </ol>
+    <section class="band" aria-labelledby="myths-title">
+      <div class="wrap split">
+        <div class="oracle-intro">
+          <h2 class="big" id="myths-title">Recruitment, without the <em>myths.</em></h2>
+          <details class="lore"><summary>The oracle</summary><p>In ancient Greece, people went to the oracle at Delphi for guidance before big decisions.</p></details>
+        </div>
+        <div class="myths">
+          <details>
+            <summary><span class="myth">A recruiter just fills the vacancy.</span><span class="ask">Ask the oracle</span></summary>
+            <p class="truth"><b>The oracle says</b>Before we search, we learn how your business runs and where you want to take it, so every hire supports your long-term vision as well as the role in front of you.</p>
+          </details>
+          <details>
+            <summary><span class="myth">Your CV says it all.</span><span class="ask">Ask the oracle</span></summary>
+            <p class="truth"><b>The oracle says</b>No CV can say it all. That's why we start with a conversation, to get to know you and understand what you're really looking for.</p>
+          </details>
+          <details>
+            <summary><span class="myth">You have to be job hunting to talk to a recruiter.</span><span class="ask">Ask the oracle</span></summary>
+            <p class="truth"><b>The oracle says</b>Some of the best moves start with a conversation before you're even looking. Talking to us doesn't commit you to anything.</p>
+          </details>
+          <details>
+            <summary><span class="myth">You need experience to become a recruiter.</span><span class="ask">Ask the oracle</span></summary>
+            <p class="truth"><b>The oracle says</b>You don't. If you have the motivation and the skills to succeed, our trainee roles are made for you.</p>
+          </details>
+          <details>
+            <summary><span class="myth">Recruitment is just a stop gap.</span><span class="ask">Ask the oracle</span></summary>
+            <p class="truth"><b>The oracle says</b>It can be a career for life. We're honest about what the job really involves before you say yes, so you start somewhere you can grow.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-
-    <section class="section" aria-label="Hiring or moving">
-      <div class="wrap">
-        <div class="paths">
+    <section class="band" aria-label="Hiring or moving">
+      <div class="wrap paths">
         <a class="card" href="hiring.html">
-          <figure class="card-photo"><img class="pos-pillars" src="assets/img/pillars-800.jpg" alt="The Porch of the Caryatids on the Acropolis in Athens, carved women holding up the roof" width="800" height="532" loading="lazy" decoding="async"><figcaption class="card-hint" aria-hidden="true">Relationships that stand the test of time.</figcaption></figure>
-          <h3>Hiring</h3>
-          <p>We recruit for every role that keeps a recruitment business running, and shape each hire around how your business actually works.</p>
+          <span class="card-photo pillars">
+            <img class="pos-pillars" src="assets/img/pillars-1200.jpg" srcset="assets/img/pillars-800.jpg 800w, assets/img/pillars-1200.jpg 1200w" sizes="(min-width: 760px) 50vw, 100vw" alt="The Porch of the Caryatids on the Acropolis in Athens, carved women holding up the roof" width="1200" height="799" loading="lazy" decoding="async">
+            <span class="card-hint" aria-hidden="true">Relationships that stand the test of time.</span>
+          </span>
+          <h2 class="path-title">Hiring</h2>
+          <p>We've worked inside recruitment businesses ourselves, so we shape every hire around how your business actually works.</p>
         </a>
         <a class="card" href="careers.html">
-          <figure class="card-photo"><img class="pos-sisyphus" src="assets/img/sisyphus-800.jpg" alt="A man pushing against a huge boulder on a rocky hillside" width="800" height="600" loading="lazy" decoding="async"><figcaption class="card-hint ink" aria-hidden="true">Pushing the same boulder every quarter?</figcaption></figure>
-          <h3>Careers</h3>
-          <p>Whether you're new to recruitment or ready for your next move, we'll find where you fit and prepare you for every interview.</p>
+          <span class="card-photo">
+            <img class="pos-sisyphus" src="assets/img/sisyphus-1200.jpg" srcset="assets/img/sisyphus-800.jpg 800w, assets/img/sisyphus-1200.jpg 1200w" sizes="(min-width: 760px) 50vw, 100vw" alt="A man pushing against a huge boulder on a rocky hillside" width="1200" height="900" loading="lazy" decoding="async">
+            <span class="card-hint ink" aria-hidden="true">Pushing the same boulder every quarter?</span>
+          </span>
+          <h2 class="path-title">Careers</h2>
+          <p>New to recruitment or ready for your next move, we'll find where you fit and prepare you for every interview.</p>
         </a>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="why-title">
+      <div class="wrap split">
+        <h2 class="big why" id="why-title">Why <span class="swap"><span class="swap-word">Delos</span><span class="swap-mark" aria-hidden="true"></span></span><span class="q">?</span></h2>
+        <div class="story">
+          <p class="lede-big">In Greek mythology, the island of Delos drifted around the seas until it found its place.</p>
+          <p>We help people and businesses find theirs. For candidates, that's a role you can settle into and build a career in. For businesses, it's people who stay and grow with you.</p>
+          <a class="text-link" href="about.html">Our story</a>
         </div>
       </div>
     </section>
 
-    <section class="section white" aria-labelledby="reviews-title">
+    <section class="band" aria-labelledby="reviews-title">
       <div class="wrap">
-        <h2 id="reviews-title">What people say<span class="dot">.</span></h2>
+        <h2 class="big" id="reviews-title">What people say<em>.</em></h2>
         <div class="quotes">
           <figure>
-            <blockquote><p>She was impeccably sharp with her attention to detail, focusing on what I needed/wanted from my next role as well as finding the perfect fit for me.</p></blockquote>
+            <blockquote><p>She was <mark>impeccably sharp with her attention to detail</mark>, focusing on what I needed/wanted from my next role as well as finding the perfect fit for me.</p></blockquote>
             <figcaption>Candidate, LinkedIn</figcaption>
           </figure>
           <figure>
-            <blockquote><p>I had Maria represent me and could not have had a more comfortable and supportive experience. Consistent contact and checking in with great advice and left every call with a confident smile and good experience.</p></blockquote>
+            <blockquote><p>I had Maria represent me and <mark>could not have had a more comfortable and supportive experience</mark>. Consistent contact and checking in with great advice and left every call with a confident smile and good experience.</p></blockquote>
             <figcaption>Candidate, Google review</figcaption>
           </figure>
           <figure>
-            <blockquote><p>Maria at Delos recruitment is genuinely the best recruiter someone could ask for. She is super supportive, helpful and always goes the extra mile to keep you updated.</p></blockquote>
+            <blockquote><p>Maria at Delos recruitment is <mark>genuinely the best recruiter someone could ask for</mark>. She is super supportive, helpful and always goes the extra mile to keep you updated.</p></blockquote>
             <figcaption>Candidate, Google review</figcaption>
           </figure>
         </div>
-        <p class="more-reviews"><a href="https://share.google/tXGXv0by0SHzzuIAu">Read our Google reviews</a></p>
+        <p class="more-reviews"><a class="text-link" href="https://share.google/tXGXv0by0SHzzuIAu">Read our Google reviews</a></p>
       </div>
     </section>
 
-    <section class="section brand" aria-labelledby="close-title">
-      <div class="wrap narrow">
+    <section class="close" aria-labelledby="close-title">
+      <div class="wrap">
         <h2 id="close-title">Every hire is just the beginning, and how it starts shapes what comes next.</h2>
-        <div class="actions"><a class="btn light" href="contact.html">Get in touch</a></div>
+        <a class="btn light" href="contact.html">Get in touch</a>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -325,10 +335,5 @@
       </div>
     </div>
   </footer>
-  <script src="assets/js/vendor/gsap.min.js" defer></script>
-  <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="assets/js/vendor/SplitText.min.js" defer></script>
-  <script src="assets/js/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/motion.js" defer></script>
 </body>
 </html>

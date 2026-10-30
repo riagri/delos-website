@@ -15,13 +15,14 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 ## Tech
 
 - Plain HTML and CSS, minimal vanilla JS. No frameworks, build step or npm. Header, footer and search data are duplicated across pages on purpose (fine until about 20 pages).
+- Home uses `home.css` and `home.js` only (no GSAP or Lenis); other pages keep `styles.css` and the motion scripts until they move to the home design, then `home.css` becomes the one stylesheet.
 - Motion: GSAP 3.13 (ScrollTrigger, SplitText) and Lenis 1.1, self-hosted in `assets/js/vendor`, never a CDN. `assets/js/motion.js` adds smooth scroll and headline reveals and switches off for reduced motion. React Bits effects are recreated in GSAP, never React.
 - Visitor stats: none for now. If wanted, Plausible only (cookie-free): `https://plausible.io/js/script.outbound-links.tagged-events.js`, `data-domain="delosrecruitment.co.uk"`, allow plausible.io in the security policy, tag buttons with `plausible-event-name=...`. Never add cookie-setting tools without a consent banner.
 - Search: every page has the EmploymentAgency JSON-LD (sameAs socials and Google reviews, contactPoint). Home adds a FAQPage from the five myths (keep in step with the visible myths); Hiring and Careers add a Service; About and Contact use AboutPage and ContactPage. `llms.txt` holds key facts, process, myths and reviews word for word: update it whenever that copy changes. robots.txt welcomes AI crawlers. IndexNow key is the 32-character .txt in the root: ping api.indexnow.org with changed URLs after big updates.
 
 ## Brand
 
-- Tagline: "Everything you have heard about recruitment is a myth". Descriptor: "Rec2Rec for the whole recruitment business" (short: "Specialist Rec2Rec, Surrey and across the UK"). Display name everywhere: "Delos Recruitment | Rec2Rec". Retired: "Recruitment for recruitment businesses. Done properly."
+- Tagline: "Recruitment, without the myths." (retired: "Everything you have heard about recruitment is a myth"). Descriptor: "Rec2Rec for the whole recruitment business" (short: "Specialist Rec2Rec, Surrey and across the UK"). Display name everywhere: "Delos Recruitment | Rec2Rec". Retired: "Recruitment for recruitment businesses. Done properly."
 - Voice: confident not boastful, warm not fluffy, direct not blunt. No buzzwords, clichés or corporate filler. UK English. No em or en dashes, no emoji, no exclamation marks.
 - Speaks as "we", never "I". No personal "about Maria" section, no photos of people from Maria's life. Speak to the reader ("you", "your business"): Hiring to clients, Careers to candidates, About describes the business.
 - Stress thoroughness, never speed ("quick", "fast", "efficient").
@@ -51,7 +52,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 | Page | Photo | Headline | Hook |
 |---|---|---|---|
-| Home | Labyrinth (original colours, cropped so the woman is centred, 1200x2000; headline right-aligned top right in the sky) | Lost in the labyrinth? We'll guide you through. | When every role and every recruiter starts to look the same, it's hard to know which way to turn. |
+| Home | Labyrinth (original colours, cropped so the woman is centred, 1200x2000; headline right-aligned top right in the sky) | Lost in the labyrinth? We'll guide you through. | When every role and every agency starts to look the same, it's hard to know which way to turn. |
 | Hiring (and Home Hiring card) | Pillars / caryatids (Unsplash fJ7dY66Jpec, whole porch, blue sky; headline top left in the sky) | Relationships that stand the test of time. | Hires that last, and a partnership that lasts even longer. |
 | Careers hero | Sisyphus | Pushing the same boulder every quarter? | If every quarter feels like the same uphill push and nothing ever changes, it might be time for a move. |
 | Careers, falling-into-recruitment section | Light aircraft in clear blue sky (Maria's; white headline low) | Did you fall into recruitment? We'll help you fly. | Plenty of great recruiters never planned to be one. What matters is where you go from here. |
@@ -61,14 +62,14 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 ## Pages
 
-1. **Home** (index.html): labyrinth opener; tagline as the myths heading with "myth." in pink; roles as a three-by-two list; five myths ("Ask the oracle +" reveals each truth, no JS); Hiring and Careers paths; two reviews; closing line.
+1. **Home** (index.html): labyrinth opener with "The labyrinth +" story (Ariadne's thread unwinds when opened); roles in two columns; tagline as the myths heading with "myths." in pink and "The oracle +" story; five myths ("Ask the oracle +", the oracle answers, no JS); Hiring and Careers cards; "Why Delos?" (the drifting island, links to About); three reviews with key phrases in bold; closing line. Type scale on Home: display clamp(32px, 3.4vw, 46px).
 2. **Hiring** (hiring.html): clients. "How we work" in five steps, in Maria's words.
 3. **Careers** (careers.html): people new to recruitment and experienced recruiters.
 4. **About** (about.html): the business in "we" voice.
 5. **Contact** (contact.html): client and candidate booking buttons, email, phone.
 6. **Privacy notice** (privacy.html): word for word from Maria's Lawspeed privacy-notice.pdf.
 
-- Myths: fills the vacancy; your CV says it all; once the CV is sent the recruiter disappears; you need experience to become a recruiter; recruitment is just a stop gap (keep it short).
+- Myths: fills the vacancy; your CV says it all; you have to be job hunting to talk to a recruiter; you need experience to become a recruiter; recruitment is just a stop gap (keep it short).
 - Each idea has one home: "worked inside recruitment businesses" on Home only; "first step / long term career" on Careers only; confidentiality on Careers hero and Contact only; "Every hire is just the beginning" on the closing band only.
 - Calls to action: one per page, at most twice (top and close), plus the header "Book a call" button (links to Contact). No secondary buttons. Mid-page images carry no button; only the closing image does. Home and About: Get in touch. Hiring: Book a client call. Careers: Book a candidate call (hero, Sisyphus). Contact: the two booking buttons only. The blue closing band ("Every hire is just the beginning, and how it starts shapes what comes next.") ends Home, Hiring and About.
 
