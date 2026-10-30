@@ -368,6 +368,6 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 @media (min-width: 960px) { .wrap.narrow > h1 { grid-column: 1; grid-row: 1 / span 20; max-width: 11em; margin: 0; align-self: start; } }
 /* Jobs: "Which / way / next?" one word a line, centred in the open walkway at the middle of the crossing */
 .ph-crossroads .photo-title { font-size: clamp(44px, 6vw, 72px); line-height: 1; }
-.ph-crossroads img { scale: 2.9; transform-origin: 62.5% 50%; } /* zoom right in so the open grey square where the crossings meet fills the frame around the headline */
-@media (max-width: 759px) { .ph-crossroads img { scale: 3.65; transform-origin: 62.6% 50%; } .ph-crossroads .photo-title { font-size: 44px; } }
+.ph-crossroads img { scale: 1.5; transform-origin: 52% 50%; } /* the whole crossing, zoomed in a little (same on every screen); the headline sits in the dark square where the four crossings meet, clear of the stripes */ /* zoom right in so the open grey square where the crossings meet fills the frame around the headline */
+@media (max-width: 759px) { .ph-crossroads img { scale: 1.5; transform-origin: 52% 50%; } .ph-crossroads .photo-title { font-size: 44px; } }
 @media (min-width: 960px) { .quotes { grid-template-columns: repeat(3, 1fr); gap: 48px; } } /* three reviews side by side */
