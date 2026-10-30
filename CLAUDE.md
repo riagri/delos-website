@@ -15,7 +15,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 ## Tech
 
 - Plain HTML and CSS, minimal vanilla JS. No frameworks, build step or npm. Header, footer and search data are duplicated across pages on purpose (fine until about 20 pages).
-- Home loads `home.css?v=N` and `home.js?v=N`: raise N whenever either file changes, so browsers fetch the new copy instead of a cached one.
+- Pages load `styles.css?v=N` (Home: `home.css?v=N`, `home.js?v=N`): raise N on every page whenever the file changes, so browsers fetch the new copy instead of a cached one.
 - Home uses `home.css` and `home.js` only (no GSAP or Lenis); other pages keep `styles.css` and the motion scripts until they move to the home design, then `home.css` becomes the one stylesheet.
 - Motion: GSAP 3.13 (ScrollTrigger, SplitText) and Lenis 1.1, self-hosted in `assets/js/vendor`, never a CDN. `assets/js/motion.js` adds smooth scroll and headline reveals and switches off for reduced motion. React Bits effects are recreated in GSAP, never React.
 - Visitor stats: none for now. If wanted, Plausible only (cookie-free): `https://plausible.io/js/script.outbound-links.tagged-events.js`, `data-domain="delosrecruitment.co.uk"`, allow plausible.io in the security policy, tag buttons with `plausible-event-name=...`. Never add cookie-setting tools without a consent banner.
