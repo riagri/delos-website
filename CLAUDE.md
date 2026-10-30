@@ -18,6 +18,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 - Home uses `home.css` and `home.js` only (no GSAP or Lenis); other pages keep `styles.css` and the motion scripts until they move to the home design, then `home.css` becomes the one stylesheet.
 - Motion: GSAP 3.13 (ScrollTrigger, SplitText) and Lenis 1.1, self-hosted in `assets/js/vendor`, never a CDN. `assets/js/motion.js` adds smooth scroll and headline reveals and switches off for reduced motion. React Bits effects are recreated in GSAP, never React.
 - Visitor stats: none for now. If wanted, Plausible only (cookie-free): `https://plausible.io/js/script.outbound-links.tagged-events.js`, `data-domain="delosrecruitment.co.uk"`, allow plausible.io in the security policy, tag buttons with `plausible-event-name=...`. Never add cookie-setting tools without a consent banner.
+- Links and addresses: short form only (`/hiring`, never `hiring.html`); GitHub Pages serves the .html file behind it. Canonicals, sitemap, search data and llms.txt use the same form.
 - Search: every page has the EmploymentAgency JSON-LD (sameAs socials and Google reviews, contactPoint). Home adds a FAQPage from the five myths (keep in step with the visible myths); Hiring and Careers add a Service; About and Contact use AboutPage and ContactPage. `llms.txt` holds key facts, process, myths and reviews word for word: update it whenever that copy changes. robots.txt welcomes AI crawlers. IndexNow key is the 32-character .txt in the root: ping api.indexnow.org with changed URLs after big updates.
 
 ## Brand
@@ -62,12 +63,12 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 ## Pages
 
-1. **Home** (index.html): labyrinth opener with "The labyrinth +" story (Ariadne's thread unwinds when opened); roles in two columns; tagline as the myths heading with "myths." in pink and "The oracle +" story; five myths ("Ask the oracle +", the oracle answers, no JS); Hiring and Careers cards; "Why Delos?" (the drifting island, links to About); three reviews with key phrases in bold; closing line. Type scale on Home: display clamp(32px, 3.4vw, 46px).
-2. **Hiring** (hiring.html): clients. "How we work" in five steps, in Maria's words.
-3. **Careers** (careers.html): people new to recruitment and experienced recruiters.
-4. **About** (about.html): the business in "we" voice.
-5. **Contact** (contact.html): client and candidate booking buttons, email, phone.
-6. **Privacy notice** (privacy.html): word for word from Maria's Lawspeed privacy-notice.pdf.
+1. **Home** (index.html, address /): labyrinth opener with "The labyrinth +" story (Ariadne's thread unwinds when opened); roles in two columns; tagline as the myths heading with "myths." in pink and "The oracle +" story; five myths ("Ask the oracle +", the oracle answers, no JS); Hiring and Careers cards; "Why Delos?" (the drifting island, links to About); three reviews with key phrases in bold; closing line. Type scale on Home: display clamp(32px, 3.4vw, 46px).
+2. **Hiring** (/hiring): clients. "How we work" in five steps, in Maria's words.
+3. **Careers** (/careers): people new to recruitment and experienced recruiters.
+4. **About** (/about): the business in "we" voice.
+5. **Contact** (/contact): client and candidate booking buttons, email, phone.
+6. **Privacy notice** (/privacy): word for word from Maria's Lawspeed privacy-notice.pdf.
 
 - Myths: fills the vacancy; your CV says it all; you have to be job hunting to talk to a recruiter; you need experience to become a recruiter; recruitment is just a stop gap (keep it short).
 - Each idea has one home: "worked inside recruitment businesses" on Home only; "first step / long term career" on Careers only; confidentiality on Careers hero and Contact only; "Every hire is just the beginning" on the closing band only.

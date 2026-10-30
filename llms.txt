@@ -41,12 +41,12 @@
 ## Pages
 
 - [Home](https://delosrecruitment.co.uk/): what Delos does, the myths about recruitment, and reviews
-- [Hiring](https://delosrecruitment.co.uk/hiring.html): for recruitment businesses hiring trainees, recruiters, sales, marketing, operations and administration roles
-- [Careers](https://delosrecruitment.co.uk/careers.html): for experienced recruiters and people thinking about a move into recruitment
-- [Jobs](https://delosrecruitment.co.uk/jobs.html): current roles
-- [About](https://delosrecruitment.co.uk/about.html): who Delos is and why it was started
-- [Contact](https://delosrecruitment.co.uk/contact.html): book a client or candidate call, email, phone or WhatsApp
-- [Privacy notice](https://delosrecruitment.co.uk/privacy.html)
+- [Hiring](https://delosrecruitment.co.uk/hiring): for recruitment businesses hiring trainees, recruiters, sales, marketing, operations and administration roles
+- [Careers](https://delosrecruitment.co.uk/careers): for experienced recruiters and people thinking about a move into recruitment
+- [Jobs](https://delosrecruitment.co.uk/jobs): current roles
+- [About](https://delosrecruitment.co.uk/about): who Delos is and why it was started
+- [Contact](https://delosrecruitment.co.uk/contact): book a client or candidate call, email, phone or WhatsApp
+- [Privacy notice](https://delosrecruitment.co.uk/privacy)
 
 ## Elsewhere
 
