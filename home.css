@@ -196,7 +196,8 @@ figure { margin: 0; min-width: 0; }
 .quotes figure::before { content: "\201C"; font-family: var(--serif); font-size: var(--t-display); line-height: .6; height: .4em; color: var(--pink); }
 .quotes blockquote { margin: 0; display: flex; flex-direction: column; }
 .quotes blockquote::after { content: "\201D"; display: block; text-align: right; font-family: var(--serif); font-size: var(--t-display); line-height: .6; height: .4em; margin-top: auto; padding-top: 14px; color: var(--pink); } /* closing mark, matching the opening one, level across all three */
-.quotes mark { background: none; color: var(--slate); font-weight: 600; }
+.quotes mark { background: none; color: var(--slate); font-weight: 600; transition: color .3s; }
+@media (hover: hover) { .quotes figure:hover mark { color: var(--blue); } } /* computers: key phrases turn blue on hover; phones stay black */
 .quotes figcaption { font-size: var(--t-small); color: var(--quiet); }
 .more-reviews { margin-top: 36px; }
 
