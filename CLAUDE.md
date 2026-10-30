@@ -77,9 +77,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 ## Contact details
 
 - Email: hello@delosrecruitment.co.uk. Phone: +44 7537 142925. WhatsApp link (Contact and footer only): https://wa.me/447537142925
-- Book a call: https://calendly.com/maria-delosrecruitment (free plan, one "Initial Call" event). Link out only, never embed (embeds set cookies).
-  - Client: https://calendly.com/maria-delosrecruitment/initial-call?a1=Client%20call
-  - Candidate: https://calendly.com/maria-delosrecruitment/initial-call?a1=Candidate%20call
+- Book a call: Google Calendar booking page https://calendar.google.com/calendar/appointments/schedules/AcZssZ2adEfhJ5dO0tuSxrlUAzMupvjrWrM3j_4_z_xjY-IcJYrt36s3E7-gDhUC0zSqBGstYqDGqc5a (one page for clients and candidates; its booking form asks which). Link out only, never embed (embeds set cookies). Calendly is retired.
 - Socials (footer icons, plain, pink on hover, no underlines): LinkedIn https://www.linkedin.com/company/delosrecruitment/, Instagram https://www.instagram.com/delosrecruitment, Facebook https://www.facebook.com/delosrecruitment, TikTok https://www.tiktok.com/@delosrecruitment, X https://x.com/delos_rec, Google reviews https://share.google/tXGXv0by0SHzzuIAu
 - Footer: three columns, no titles, no tagline. Logo with "© 2026 Delos Recruitment Ltd." / "Registered in England and Wales," / "company number 16163283."; page links plus Privacy notice; email, phone, Book a call, one row of social icons (WhatsApp first).
 - Maria's home address never appears anywhere public.
