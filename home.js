@@ -45,9 +45,20 @@
     if (run) { run.remove(); run = null; }
     var box = story.getBoundingClientRect(), r = start.getBoundingClientRect(), s = text.getBoundingClientRect();
     var x0 = r.left + r.width / 2 - box.left, y0 = r.top + r.height / 2 - box.top;
-    var yb = s.bottom - box.top + 10, xe = s.left - box.left + 10, sx = x0 - 70;
-    // Drops down to the left, then lies slack under the story with a soft droop
-    var drop = 'M' + x0 + ' ' + y0 + ' C' + (x0 - 6) + ' ' + (y0 + 22) + ' ' + (x0 - 26) + ' ' + (yb - 2) + ' ' + sx + ' ' + yb;
+    var yb = s.bottom - box.top + 10, xe = s.left - box.left + 10, sx = x0 - 70, drop;
+    if (x0 > box.width / 2) {
+      // Desktop (link on the right): drops down to the left
+      drop = 'M' + x0 + ' ' + y0 + ' C' + (x0 - 6) + ' ' + (y0 + 22) + ' ' + (x0 - 26) + ' ' + (yb - 2) + ' ' + sx + ' ' + yb;
+    } else {
+      // Phones (link on the left): runs right in the gap under the label, down the clear space beside the story, then back
+      var gy = y0 + 17;
+      sx = Math.min(s.right - box.left + 40, box.width - 14);
+      drop = 'M' + x0 + ' ' + y0 + ' C' + (x0 + 4) + ' ' + gy + ' ' + (x0 + 30) + ' ' + gy + ' ' + (x0 + 60) + ' ' + gy +
+        ' C' + (sx - 30) + ' ' + gy + ' ' + (sx + 14) + ' ' + (gy + 4) + ' ' + (sx + 8) + ' ' + ((gy + yb) / 2) +
+        ' C' + (sx + 4) + ' ' + (yb - 14) + ' ' + (sx + 6) + ' ' + (yb - 2) + ' ' + (sx - 10) + ' ' + yb;
+      sx -= 10;
+    }
+    // Then lies slack under the story with a soft droop
     var d = drop, span = sx - xe, sags = [5, -3, 4];
     for (var i = 1; i <= 3; i++) {
       var px = sx - span * (i - 1) / 3, nx = sx - span * i / 3;
@@ -89,5 +100,11 @@
     if (story.open) unwind(true);
     else if (run) { run.remove(); run = null; }
   });
-  window.addEventListener('resize', function () { if (story.open) unwind(false); });
+  // Phones fire resize when the address bar hides on scroll: only redraw if the width really changed
+  var lastW = window.innerWidth;
+  window.addEventListener('resize', function () {
+    if (window.innerWidth === lastW) return;
+    lastW = window.innerWidth;
+    if (story.open) unwind(false);
+  });
 })();
