@@ -391,3 +391,4 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
   .opener-fig { width: 100%; max-width: none; margin: 0; }
   .opener.story:nth-of-type(even) .opener-fig { order: 2; }
 }
+@media (min-width: 960px) { .opener-fig .lore summary { display: flex; justify-content: flex-end; } } /* desktop: right, under the photo, like the homepage labyrinth */
