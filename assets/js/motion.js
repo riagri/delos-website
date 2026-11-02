@@ -79,3 +79,14 @@
     reveal();
   }
 })();
+
+/* Open a question when a link points straight to it (e.g. /careers#what-is-rec2rec) */
+(function () {
+  var open = function () {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id && document.getElementById(id);
+    if (el && el.tagName === "DETAILS") { el.open = true; el.scrollIntoView({ block: "center" }); }
+  };
+  window.addEventListener("load", open);
+  window.addEventListener("hashchange", open);
+})();

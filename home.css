@@ -245,3 +245,7 @@ figure { margin: 0; min-width: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* In-text links: underlined, blue on hover */
+.words p a { text-underline-offset: 3px; }
+.words p a:hover { color: var(--blue); }
