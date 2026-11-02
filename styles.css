@@ -372,3 +372,13 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 .ph-crossroads img { position: relative; width: 140%; height: 140%; max-width: none; left: -20.8%; top: -20%; } /* the whole crossing, zoomed in a little by size (the motion script owns transform and adds its own slight zoom); the headline sits in the dark square where the four crossings meet, clear of the stripes */
 @media (max-width: 759px) { .ph-crossroads .photo-title { font-size: 44px; } }
 @media (min-width: 960px) { .quotes { grid-template-columns: repeat(3, 1fr); gap: 48px; } } /* three reviews side by side */
+
+/* Myth stories under each photo: tap to open */
+.lore { margin: 0 0 16px; }
+.lore summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: var(--t-small); color: var(--slate-500); }
+.lore summary::-webkit-details-marker { display: none; }
+.lore summary::after { content: "+"; line-height: 1; transition: transform .3s; }
+.lore summary:hover { color: var(--slate); }
+.lore[open] summary::after { transform: rotate(45deg); }
+.lore p { margin: 0; padding: 8px 0 0; font-size: var(--t-small); line-height: 1.5; max-width: 60ch; }
+.section .lore { margin-top: 8px; }
