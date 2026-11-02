@@ -247,5 +247,5 @@ figure { margin: 0; min-width: 0; }
 }
 
 /* In-text links: underlined, blue on hover */
-.words p a { text-underline-offset: 3px; }
-.words p a:hover { color: var(--blue); }
+.words p a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(29, 30, 33, 0.35); text-underline-offset: 4px; transition: color .2s, text-decoration-color .2s; }
+.words p a:hover { color: var(--blue); text-decoration-color: var(--blue); }
