@@ -382,3 +382,12 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 .lore[open] summary::after { transform: rotate(45deg); }
 .lore p { margin: 0; padding: 8px 0 0; font-size: var(--t-small); line-height: 1.5; max-width: 60ch; }
 .section .lore { margin-top: 8px; }
+
+/* Photo with its myth story underneath */
+.opener-fig { width: calc(100% - 2 * var(--pad)); max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; }
+.opener-fig .opener-photo { width: 100%; max-width: none; margin: 0; }
+.opener-fig .lore { margin: 12px 0 0; }
+@media (min-width: 960px) {
+  .opener-fig { width: 100%; max-width: none; margin: 0; }
+  .opener.story:nth-of-type(even) .opener-fig { order: 2; }
+}
