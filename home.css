@@ -78,7 +78,12 @@ p { margin: 0; text-wrap: pretty; }
 /* Magazine spread: photo 7, words 5. Phones stack photo then words. */
 .hero { padding-top: 24px; } /* same gap under the header as the other pages */
 @media (min-width: 760px) { .hero { padding-top: 40px; } }
-@media (min-width: 960px) { .hero figure { align-self: start; } }
+@media (min-width: 960px) {
+  .hero figure { align-self: start; position: relative; }
+  .hero figure .lore { position: absolute; top: 100%; left: 0; right: 0; } /* story sits under the photo without changing the row height */
+  .hero .spread { margin-bottom: 44px; } /* room for the story line under the photo */
+  .hero .words { padding-top: 0 !important; padding-bottom: 0 !important; } /* the button ends level with the bottom of the photo */
+}
 .spread { display: grid; gap: 32px; }
 figure { margin: 0; min-width: 0; }
 .frame { position: relative; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; background: var(--rule); }
