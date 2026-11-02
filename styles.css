@@ -177,6 +177,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .myths .label { display: block; font-family: var(--font-body); font-size: var(--t-small); font-weight: 500; color: var(--slate-500); grid-column: 1 / -1; }
 .myth { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.15; color: var(--slate); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
 .myths details[open] .myth { text-decoration-color: var(--pink); }
+.oracle details[open] .myth { text-decoration-color: transparent; }
 .reveal { font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); white-space: nowrap; padding-bottom: 4px; }
 .reveal::after { content: "Ask the oracle +"; }
 .myths details[open] .reveal::after { content: "Hide"; }
