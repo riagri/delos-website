@@ -76,7 +76,9 @@ p { margin: 0; text-wrap: pretty; }
 .text-link:hover { color: var(--blue); border-bottom-color: var(--blue); }
 
 /* Magazine spread: photo 7, words 5. Phones stack photo then words. */
-.hero { padding-top: clamp(24px, 4vw, 48px); }
+.hero { padding-top: 24px; } /* same gap under the header as the other pages */
+@media (min-width: 760px) { .hero { padding-top: 40px; } }
+@media (min-width: 960px) { .hero figure { align-self: start; } }
 .spread { display: grid; gap: 32px; }
 figure { margin: 0; min-width: 0; }
 .frame { position: relative; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; background: var(--rule); }
