@@ -392,3 +392,10 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
   .opener.story:nth-of-type(even) .opener-fig { order: 2; }
 }
 @media (min-width: 960px) { .opener-fig .lore summary { display: flex; justify-content: flex-end; } } /* desktop: right, under the photo, like the homepage labyrinth */
+
+/* Oracle sections: the oracle story sits under the heading */
+.oracle-intro h2 { margin-bottom: 0; }
+.oracle-intro .lore { margin-top: 12px; }
+@media (min-width: 960px) {
+  .wrap.narrow > .oracle-intro { grid-column: 1; grid-row: 1 / span 20; max-width: 22em; align-self: start; position: sticky; top: 112px; }
+}
