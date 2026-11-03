@@ -10,7 +10,9 @@
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
   // Smooth scrolling, driven by the GSAP ticker so scroll-based reveals stay in sync.
-  var lenis = new Lenis({ anchors: true });
+  // Anchor links stop below the sticky header, so the heading they point to stays in view.
+  var header = document.querySelector('.site-header');
+  var lenis = new Lenis({ anchors: { offset: -(header ? header.offsetHeight : 0) } });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
   gsap.ticker.lagSmoothing(0);
