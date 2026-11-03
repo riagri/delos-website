@@ -176,11 +176,10 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .myth { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.15; color: var(--slate); text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: 2px; transition: text-decoration-color 200ms var(--ease); }
 .myths details[open] .myth { text-decoration-color: var(--pink); }
 .oracle details[open] .myth { text-decoration-color: transparent; }
-.reveal { font-size: var(--t-small); font-weight: 400; color: #55575E; white-space: nowrap; padding-bottom: 4px; transition: color .3s; } /* quiet, like "The truth +" on Home */
+.reveal { font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); white-space: nowrap; padding-bottom: 4px; }
 .reveal::after { content: "Ask the oracle +"; }
 .myths details[open] .reveal::after { content: "Hide"; }
-.myths summary:hover .reveal { color: var(--slate); }
-.myths details[open] .reveal { color: var(--pink); }
+.myths summary:hover .reveal { text-decoration: underline; text-underline-offset: 3px; }
 .truth { margin: -8px 0 0; padding: 0 0 28px; font-size: var(--t-body); line-height: 1.6; max-width: 38em; }
 .truth .label { color: var(--delos-blue); margin-bottom: 6px; }
 @media (max-width: 559px) { .myths summary { grid-template-columns: 1fr; } .reveal { padding-bottom: 0; } }
@@ -599,8 +598,8 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .home .why .swap-word { color: var(--blue); }
 .home .swap-mark { position: absolute; left: 0; bottom: .08em; height: .8em; aspect-ratio: 3.06; background: url("assets/logo-blue.svg") left top / 100% auto no-repeat; opacity: 0; transform: translateY(4px); transition: opacity .35s, transform .35s; }
 @media (hover: hover) {
-  .home .why:hover .swap-word { opacity: 0; }
-  .home .why:hover .swap-mark { opacity: 1; transform: none; }
+  .home .band:has(.why):hover .swap-word { opacity: 0; } /* hovering anywhere in the Why Delos section */
+  .home .band:has(.why):hover .swap-mark { opacity: 1; transform: none; }
 }
 .home .story { display: grid; gap: 18px; }
 .home .lede-big { font-family: var(--serif); font-size: var(--t-heading); line-height: var(--lh-heading); letter-spacing: -0.005em; text-wrap: balance; }
