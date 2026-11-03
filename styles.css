@@ -219,6 +219,8 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .ph-ships .photo-title { top: var(--inset); bottom: auto; left: auto; right: var(--inset); text-align: right; } /* top right, clear of the moon */
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
 .ph-404 .photo-title { top: var(--inset); bottom: auto; }
+.pos-maze { object-position: 50% 78%; }
+.ph-maze .photo-title { top: auto; bottom: var(--inset); left: auto; right: var(--inset); text-align: right; max-width: 6.5em; } /* white, low right, clear of the figure */
 .pos-pillars { object-position: 0% 0%; }
 .pos-sisyphus { object-position: 30% 50%; }
 .pos-plane { object-position: 50% 58%; }
@@ -316,6 +318,7 @@ html.lenis, html.lenis body { height: auto; }
   .ph-plane .photo-title { top: auto; bottom: var(--inset); }
   .pos-ships { object-position: 66% 50%; }
   .pos-404 { object-position: 50% 30%; }
+  .ph-maze .photo-title { top: auto; bottom: var(--inset); left: auto; right: var(--inset); text-align: right; }
 }
 
 /* Below the spreads: every text section sits on the same two columns as the photo and text above
