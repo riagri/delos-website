@@ -220,7 +220,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
 .ph-404 .photo-title { top: var(--inset); bottom: auto; }
 .pos-maze { object-position: 50% 78%; }
-.ph-maze .photo-title { top: auto; bottom: var(--inset); left: auto; right: var(--inset); text-align: right; max-width: 6.5em; } /* white, low right, clear of the figure */
+.maze-title { font-size: var(--t-display); line-height: 1.04; letter-spacing: -0.02em; max-width: 9em; margin: 0 0 0.6em; } /* 404: headline beside the photo, button straight beneath */
 .pos-pillars { object-position: 0% 0%; }
 .pos-sisyphus { object-position: 30% 50%; }
 .pos-plane { object-position: 50% 58%; }
@@ -318,7 +318,6 @@ html.lenis, html.lenis body { height: auto; }
   .ph-plane .photo-title { top: auto; bottom: var(--inset); }
   .pos-ships { object-position: 66% 50%; }
   .pos-404 { object-position: 50% 30%; }
-  .ph-maze .photo-title { top: auto; bottom: var(--inset); left: auto; right: var(--inset); text-align: right; }
 }
 
 /* Below the spreads: every text section sits on the same two columns as the photo and text above
