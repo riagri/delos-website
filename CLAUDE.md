@@ -60,7 +60,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 | Careers, new-to-recruitment section | Light aircraft in clear blue sky (Maria's; white headline low) | New to recruitment? We'll help you find your wings. | Starting out in recruitment is a big leap. We'll make sure you land somewhere you can grow. |
 | About | Commuters in a bright white hall, one in a camel coat (Maria's choice; dark headline top left on the ceiling) | Never just a face in the crowd. | Behind every CV and every vacancy is a person. We take the time to get to know them. |
 | Contact | Single red cargo ship at dusk with the moon (Maria's; dark headline top right, clear of the moon) | Ships passing in the night? Not with us. | Let's find a time that suits you. |
-| 404 | Person alone in a curving hedge maze, black and white on purpose (you have left the site) (Unsplash 1KdnEeZ-gLU). The one page with the headline beside the photo, not in it (the texture leaves no open space), button straight beneath | Looks like you took a wrong turn. | Button: Find your way back |
+| 404 | Person alone in a curving hedge maze, black and white on purpose (you have left the site) (Unsplash 1KdnEeZ-gLU). The one page with the headline beside the photo, not in it (the texture leaves no open space), button straight beneath. A large white "404" sits in the photo, top right, away from the figure | Looks like you took a wrong turn. | Button: Find your way back |
 
 ## Pages
 

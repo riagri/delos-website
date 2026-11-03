@@ -220,6 +220,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
 .ph-404 .photo-title { top: var(--inset); bottom: auto; }
 .pos-maze { object-position: 50% 78%; }
+.maze-num { position: absolute; z-index: 1; top: var(--inset); right: var(--inset); font-family: var(--font-display); font-size: clamp(64px, 9vw, 120px); line-height: 1; letter-spacing: -0.03em; color: var(--white); } /* 404 in the photo, top right, away from the figure */
 .maze-title { font-size: var(--t-display); line-height: 1.04; letter-spacing: -0.02em; max-width: 9em; margin: 0 0 0.6em; } /* 404: headline beside the photo, button straight beneath */
 .pos-pillars { object-position: 0% 0%; }
 .pos-sisyphus { object-position: 30% 50%; }
