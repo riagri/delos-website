@@ -16,7 +16,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 - Plain HTML and CSS, minimal vanilla JS. No frameworks, build step or npm. Header, footer and search data are duplicated across pages on purpose (fine until about 20 pages).
 - Pages load `styles.css?v=N` (Home: `home.css?v=N`, `home.js?v=N`): raise N on every page whenever the file changes, so browsers fetch the new copy instead of a cached one.
-- Home uses `home.css` and `home.js` only (no GSAP or Lenis); other pages keep `styles.css` and the motion scripts until they move to the home design, then `home.css` becomes the one stylesheet.
+- Home uses `home.css` and `home.js` only (no GSAP or Lenis); other pages keep `styles.css` and the motion scripts, matched to the home look (same type scale, section spacing and closing band, no hairlines between sections). White-headline photos wait on a slate backdrop while loading.
 - Motion: GSAP 3.13 (ScrollTrigger, SplitText) and Lenis 1.1, self-hosted in `assets/js/vendor`, never a CDN. `assets/js/motion.js` adds smooth scroll and headline reveals and switches off for reduced motion. React Bits effects are recreated in GSAP, never React.
 - Fonts are self-hosted `.woff2` in `fonts/` (Gloock and Kumbh Sans variable), both preloaded on every page.
 - Visitor stats: none for now. If wanted, Plausible only (cookie-free): `https://plausible.io/js/script.outbound-links.tagged-events.js`, `data-domain="delosrecruitment.co.uk"`, allow plausible.io in the security policy, tag buttons with `plausible-event-name=...`. Never add cookie-setting tools without a consent banner.
@@ -39,7 +39,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 ## Type and layout
 
-- Scale in `styles.css`: `--t-display` (all headlines), `--t-heading` (myths, quotes, step and card titles), `--t-body` 18px, `--t-small` 16px. Nothing under 16px. Desktop uses exactly 42, 25, 18 and 16px.
+- Scale in `styles.css`: `--t-display` (all headlines), `--t-heading` (myths, quotes, step and card titles), `--t-body` 18px, `--t-small` 16px. Nothing under 16px. Desktop uses exactly 46, 25, 18 and 16px, the same as Home: display clamp(32px, 3.4vw, 46px) in both stylesheets.
 - Desktop (960px+) is a magazine spread: square photo (7fr) beside its words (5fr); Careers' second story swaps sides. Text sections below use the same columns (title 5fr left, content 7fr right). Phones stack photo then words.
 - Photo headlines: one size, in the photo's open space, never over the subject. White headlines sit low, dark headlines sit high. On phones only the labyrinth and caryatids headlines drop to 26px.
 - The hook beside each photo is Gloock 24 to 30px, reading as the answer to the headline. Paragraphs are full slate.
@@ -74,14 +74,14 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 - Myths: fills the vacancy; your CV says it all; you have to be job hunting to talk to a recruiter; you need experience to become a recruiter; recruitment is just a stop gap (keep it short).
 - Each idea has one home: "worked inside recruitment businesses" on Home only; "first step / long term career" on Careers only; confidentiality on Careers hero and Contact only; "Every hire is just the beginning" on the closing band only.
-- Calls to action: one per page, at most twice (top and close), plus the header "Book a call" button (links to Contact). No secondary buttons. Mid-page images carry no button; only the closing image does. Home and About: Get in touch. Hiring and Careers: "Let's talk" (top and closing band). Careers points new people to the oracle with a text link ("Ask the oracle below."), never a button, and has no CV upload or CV email link. Contact: the two booking buttons only ("Talk about hiring", "Talk about your career"). The blue closing band ("Every hire is just the beginning, and how it starts shapes what comes next.") ends Hiring. Home ends with "No myths. Just the right people in the right roles." and About with "Recruitment has always been about people. With us, it still is." Careers ends with its own band: "Wherever you are in your career, your next chapter starts with a conversation."
+- Calls to action: one per page, at most twice (top and close), plus the header "Get in touch" button (links to Contact; was "Book a call" until bookings reopen). No secondary buttons. Mid-page images carry no button; only the closing image does. Home and About: Get in touch. Hiring and Careers: "Let's talk" (top and closing band). Careers points new people to the oracle with a text link ("Ask the oracle below."), never a button, and has no CV upload or CV email link. Contact: the two booking buttons only ("Talk about hiring", "Talk about your career"). The blue closing band ("Every hire is just the beginning, and how it starts shapes what comes next.") ends Hiring. Home ends with "No myths. Just the right people in the right roles." and About with "Recruitment has always been about people. With us, it still is." Careers ends with its own band: "Wherever you are in your career, your next chapter starts with a conversation."
 
 ## Contact details
 
 - Email: hello@delosrecruitment.co.uk. Phone: +44 7537 142925. WhatsApp link (Contact and footer only): https://wa.me/447537142925
 - Book a call: Google Calendar booking page https://calendar.app.google/uaRx23B52yra5b9Z9 (one page for clients and candidates; its booking form asks which). Link out only, never embed (embeds set cookies). Calendly is retired.
 - Socials (footer icons, plain, pink on hover, no underlines): LinkedIn https://www.linkedin.com/company/delosrecruitment/, Instagram https://www.instagram.com/delosrecruitment, Facebook https://www.facebook.com/delosrecruitment, TikTok https://www.tiktok.com/@delosrecruitment, X https://x.com/delos_rec, Google reviews https://share.google/tXGXv0by0SHzzuIAu
-- Footer: three columns, no titles, no tagline. Logo with "© 2026 Delos Recruitment Ltd." / "Registered in England and Wales," / "company number 16163283."; page links plus Privacy notice; email, phone, Book a call, one row of social icons (WhatsApp first).
+- Footer: three columns, no titles, no tagline. Logo with "© 2026 Delos Recruitment Ltd." / "Registered in England and Wales," / "company number 16163283."; page links plus Privacy notice; email, phone, Get in touch, one row of social icons (WhatsApp first).
 - Maria's home address never appears anywhere public.
 
 ## Hosting
