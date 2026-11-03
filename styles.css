@@ -113,10 +113,6 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .eyebrow { display: block; font-size: var(--t-small); font-weight: 500; color: var(--slate-500); margin-bottom: 4px; }
 .muted { color: var(--slate-500); }
 
-.chips { display: flex; flex-wrap: wrap; gap: 6px 22px; list-style: none; margin: 24px 0 8px; padding: 0; }
-.chips li { font-size: var(--t-small); color: var(--slate); line-height: 1.6; }
-.chips li::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--pink); margin: 0 10px 2px 0; vertical-align: middle; }
-.chips + p { margin-top: 32px; }
 
 /* Sections */
 .hero { padding: 64px 0 72px; position: relative; overflow: hidden; }
@@ -236,7 +232,6 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .opener-inner { max-width: calc(var(--container) - 2 * var(--pad)); margin: 0 auto; padding: 40px 0 0; }
 .opener-inner > :last-child { margin-bottom: 0; }
 .opener-inner p:not(.lede):not(.hook) { max-width: 38em; }
-.opener-inner .chips { margin-top: 0; }
 .opener-inner .actions { margin-top: 28px; }
 .opener-inner .contact-list { max-width: 38em; }
 /* The follow-up line straight under each photo: one short hook in the headline face, then the detail. */
@@ -332,14 +327,8 @@ html.lenis, html.lenis body { height: auto; }
   .section.brand .wrap.narrow { display: block; }
   .section.brand .wrap.narrow > h2 { max-width: 16em; margin: 0 0 32px; }
   .opener-inner, .opener-inner > * { text-align: left; margin-left: 0; }
-  .opener-inner .actions, .opener-inner .chips { justify-content: flex-start; }
+  .opener-inner .actions { justify-content: flex-start; }
 }
-.chips { gap: 4px 16px; }
-/* Home roles: a tidy three-by-two grid so the list never wraps raggedly */
-.opener-inner .roles-label { margin: 0 0 8px; }
-.chips.roles { display: grid; grid-template-columns: repeat(3, max-content); gap: 6px 28px; margin: 0; }
-.chips.roles li { font-size: var(--t-body); }
-@media (max-width: 559px) { .chips.roles { grid-template-columns: repeat(2, max-content); } }
 .card-photo .pos-pillars { object-position: 0% 0% !important; } /* card: open sky top left for the hover headline */
 .card-photo:has(.pos-pillars) .card-hint { top: 14px; left: 18px; bottom: auto; transform: translateY(8px); max-width: 6.6em; }
 a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .card-photo:has(.pos-pillars) .card-hint { transform: none; }
