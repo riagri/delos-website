@@ -18,6 +18,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 - Pages load `styles.css?v=N` (Home: `home.css?v=N`, `home.js?v=N`): raise N on every page whenever the file changes, so browsers fetch the new copy instead of a cached one.
 - Home uses `home.css` and `home.js` only (no GSAP or Lenis); other pages keep `styles.css` and the motion scripts until they move to the home design, then `home.css` becomes the one stylesheet.
 - Motion: GSAP 3.13 (ScrollTrigger, SplitText) and Lenis 1.1, self-hosted in `assets/js/vendor`, never a CDN. `assets/js/motion.js` adds smooth scroll and headline reveals and switches off for reduced motion. React Bits effects are recreated in GSAP, never React.
+- Fonts are self-hosted `.woff2` in `fonts/` (Gloock and Kumbh Sans variable), both preloaded on every page.
 - Visitor stats: none for now. If wanted, Plausible only (cookie-free): `https://plausible.io/js/script.outbound-links.tagged-events.js`, `data-domain="delosrecruitment.co.uk"`, allow plausible.io in the security policy, tag buttons with `plausible-event-name=...`. Never add cookie-setting tools without a consent banner.
 - Links and addresses: short form only (`/hiring`, never `hiring.html`); GitHub Pages serves the .html file behind it. Canonicals, sitemap, search data and llms.txt use the same form.
 - Search: every page has the EmploymentAgency JSON-LD (sameAs socials and Google reviews, contactPoint). Home adds a FAQPage from the five myths (keep in step with the visible myths); Hiring and Careers add a Service; About and Contact use AboutPage and ContactPage. `llms.txt` holds key facts, process, myths and reviews word for word: update it whenever that copy changes. robots.txt welcomes AI crawlers. IndexNow key is the 32-character .txt in the root: ping api.indexnow.org with changed URLs after big updates.
@@ -48,7 +49,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 ## Images
 
 - Greek myth themed photos with a short headline set into the image. No logo on images, no pink highlights, no nudity, no generative AI. Free Unsplash photos or Maria's own.
-- Files in `assets/img`: `<name>-full.jpg` (up to 2000px), `<name>-1200.jpg`, `<name>-800.jpg`, all in the srcset with `sizes="(min-width: 960px) 620px, 100vw"`, framed with `object-position`.
+- Files in `assets/img`: `<name>-full.jpg` (up to 2000px), `<name>-1200.jpg`, `<name>-800.jpg`, all in the srcset with `sizes="(min-width: 960px) 620px, 100vw"`, framed with `object-position`. Each size also gets a `.webp` copy (quality 80) when it is at least 15% smaller, served through `<picture>` with a WebP `<source>` and the JPEG `<img>` as fallback (`picture { display: contents; }` keeps layouts unchanged). Crossroads has no WebP: its JPEG is smaller.
 - One clean finish baked in: saturation x0.94, slight warmth, no grain, no lifted blacks, never faded or film-look. No shadow lift or extra grading.
 - Headlines are signed off by Maria: don't change them without asking. The question lands first on scroll, then the answer.
 

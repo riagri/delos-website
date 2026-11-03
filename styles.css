@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Gloock";
-  src: url("fonts/Gloock-Regular.woff") format("woff");
+  src: url("fonts/Gloock-Regular.woff2") format("woff2");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: "Kumbh Sans";
-  src: url("fonts/KumbhSans-Variable.woff") format("woff");
+  src: url("fonts/KumbhSans-Variable.woff2") format("woff2");
   font-weight: 100 900; font-style: normal; font-display: swap;
 }
 
@@ -43,6 +43,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+picture { display: contents; } /* WebP wrapper: the img lays out as before */
 html { -webkit-text-size-adjust: 100%; color-scheme: light; }
 a, button, summary, label, input, select, textarea { touch-action: manipulation; }
 
@@ -218,7 +219,6 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .ph-sisyphus .photo-title { top: var(--inset); bottom: auto; max-width: 5em; }
 .ph-ships .photo-title { top: var(--inset); bottom: auto; left: auto; right: var(--inset); text-align: right; } /* top right, clear of the moon */
 .ph-crossroads .photo-title { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); text-align: center; width: max-content; }
-.ph-404 .photo-title { top: var(--inset); bottom: auto; }
 .pos-maze { object-position: 50% 78%; }
 .maze-num { position: absolute; z-index: 1; top: var(--inset); right: var(--inset); font-family: var(--font-display); font-size: clamp(64px, 9vw, 120px); line-height: 1; letter-spacing: -0.03em; color: var(--white); } /* 404 in the photo, top right, away from the figure */
 .maze-title { font-size: var(--t-display); line-height: 1.04; letter-spacing: -0.02em; max-width: 9em; margin: 0 0 0.6em; } /* 404: headline beside the photo, button straight beneath */
@@ -227,8 +227,6 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .pos-plane { object-position: 50% 58%; }
 .pos-crossroads { object-position: 50% 50%; }
 .pos-ships { object-position: 64% 50%; }
-.pos-404 { object-position: 50% 20%; }
-@media (min-width: 760px) { .pos-404 { object-position: 50% 42%; } }
 @media (min-width: 760px) {
   .ph-sisyphus .photo-title { top: 50%; transform: translateY(-50%); max-width: none; }
   .br-d { display: block; } /* desktop: one or two words a line so the headline fills the left side */
@@ -318,7 +316,6 @@ html.lenis, html.lenis body { height: auto; }
   .pos-plane { object-position: 50% 62%; }
   .ph-plane .photo-title { top: auto; bottom: var(--inset); }
   .pos-ships { object-position: 66% 50%; }
-  .pos-404 { object-position: 50% 30%; }
 }
 
 /* Below the spreads: every text section sits on the same two columns as the photo and text above

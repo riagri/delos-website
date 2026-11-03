@@ -1,7 +1,7 @@
 /* Delos Recruitment home page. Other pages use styles.css until they move to this design. */
 
-@font-face { font-family: "Gloock"; src: url("fonts/Gloock-Regular.woff") format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Kumbh Sans"; src: url("fonts/KumbhSans-Variable.woff") format("woff"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Gloock"; src: url("fonts/Gloock-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Kumbh Sans"; src: url("fonts/KumbhSans-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 :root {
   --blue: #0053BF;
@@ -33,6 +33,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+picture { display: contents; } /* WebP wrapper: the img lays out as before */
 html { -webkit-text-size-adjust: 100%; color-scheme: light; }
 a, button, summary, label, input, select, textarea { touch-action: manipulation; }
 body { margin: 0; background: var(--pearl); color: var(--slate); font: 400 var(--t-body)/var(--lh-body) var(--sans); -webkit-font-smoothing: antialiased; }
