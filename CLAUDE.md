@@ -73,7 +73,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 
 - Myths: fills the vacancy; your CV says it all; you have to be job hunting to talk to a recruiter; you need experience to become a recruiter; recruitment is just a stop gap (keep it short).
 - Each idea has one home: "worked inside recruitment businesses" on Home only; "first step / long term career" on Careers only; confidentiality on Careers hero and Contact only; "Every hire is just the beginning" on the closing band only.
-- Calls to action: one per page, at most twice (top and close), plus the header "Book a call" button (links to Contact). No secondary buttons. Mid-page images carry no button; only the closing image does. Home and About: Get in touch. Hiring: Book a client call. Careers: Book a candidate call (hero, Sisyphus). Contact: the two booking buttons only. The blue closing band ("Every hire is just the beginning, and how it starts shapes what comes next.") ends Home, Hiring and About.
+- Calls to action: one per page, at most twice (top and close), plus the header "Book a call" button (links to Contact). No secondary buttons. Mid-page images carry no button; only the closing image does. Home and About: Get in touch. Hiring and Careers: "Let's talk" (top and closing band). Careers points new people to the oracle with a text link ("Ask the oracle below."), never a button, and has no CV upload or CV email link. Contact: the two booking buttons only. The blue closing band ("Every hire is just the beginning, and how it starts shapes what comes next.") ends Home, Hiring and About. Careers ends with its own band: "Wherever you are in your career, your next chapter starts with a conversation."
 
 ## Contact details
 
