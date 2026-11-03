@@ -28,7 +28,7 @@
 
   /* One type scale for the whole site: five sizes, far apart */
   /* Four sizes for the whole site, nothing else */
-  --t-display: clamp(30px, 3vw, 42px);    /* headline: every photo headline and section title */
+  --t-display: clamp(32px, 3.4vw, 46px);    /* headline: every photo headline and section title */
   --t-heading: clamp(21px, 1.9vw, 25px);  /* statement: hooks, myths, quotes, card and step titles */
   --t-body: 18px;                         /* every paragraph */
   --t-small: 16px;                        /* labels, nav, buttons, footer: never smaller */
@@ -389,3 +389,14 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
 @media (min-width: 960px) {
   .wrap.narrow > .oracle-intro { grid-column: 1; grid-row: 1 / span 20; max-width: 22em; align-self: start; position: sticky; top: 112px; }
 }
+
+/* Home design on every page: open space instead of hairlines, the same section spacing and closing band as Home */
+.section:not(.brand) { border-top: none; padding: clamp(88px, 11vw, 160px) 0 0; }
+.section.brand { margin-top: clamp(88px, 11vw, 160px); padding: clamp(80px, 10vw, 136px) 0; }
+.legal + .section, main > .section:first-child { padding-top: 56px; }
+
+/* Photos with a white headline wait on a dark backdrop, so the words never sit pale on pale while the photo loads */
+.opener-photo:has(.photo-title:not(.ink)), .card-photo:has(.card-hint:not(.ink)) { background: var(--slate); }
+
+/* Phones: taller tap targets in the header links */
+@media (max-width: 759px) { .site-header .nav a { display: inline-block; padding: 10px 0; } }
