@@ -33,7 +33,8 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; color-scheme: light; }
+a, button, summary, label, input, select, textarea { touch-action: manipulation; }
 body { margin: 0; background: var(--pearl); color: var(--slate); font: 400 var(--t-body)/var(--lh-body) var(--sans); -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
