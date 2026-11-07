@@ -664,3 +664,4 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .home .close h2 { color: inherit; }
 .home .split > * { grid-column: auto; max-width: none; } /* the shared question-list grid stays off Home's myths */
 #oracle { scroll-margin-top: 24px; } /* "Ask the oracle below." lands with the heading and questions in view */
+.card-photo:has(.pos-sisyphus) .card-hint { max-width: 11em; }
