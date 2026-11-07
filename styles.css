@@ -508,7 +508,7 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
   .home .ph-labyrinth .photo-title { top: 4%; right: 5%; }
   .home .pos-labyrinth { object-position: 50% 22%; }
 }
-.home .roles { list-style: none; margin: -8px 0 0; padding: 0; columns: 2; column-gap: 32px; max-width: 28em; }
+.home .roles { list-style: none; margin: -8px 0 0; padding: 0; max-width: 28em; }
 .home .roles li { position: relative; padding-left: 15px; margin-bottom: 6px; break-inside: avoid; }
 .home .roles li::before { content: ""; position: absolute; left: 0; top: .78em; width: 5px; height: 5px; border-radius: 50%; background: var(--pink); }
 @media (max-width: 559px) {
