@@ -18,7 +18,7 @@
   --delos-blue-050: #EEF3FB;
   --pink: #EC2193;
   --slate: #1D1E21;
-  --slate-500: #6E7075;
+  --slate-500: #55575E; /* labels and captions: darker for contrast (7:1 on pearl) */
   --slate-200: #D9DADC;
   --pearl: #F9F9F9;
   --white: #FFFFFF;
@@ -189,14 +189,14 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .quotes figure { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--slate-200); }
 .quotes blockquote { margin: 0; font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.25; color: var(--slate); }
 .quotes blockquote p { margin: 0 0 18px; }
-.quotes blockquote p::before { content: "\201C"; color: var(--pink); }
-.quotes blockquote p::after { content: "\201D"; color: var(--pink); }
+.quotes blockquote p::before { content: "\201C"; }
+.quotes blockquote p::after { content: "\201D"; }
 .quotes figcaption { font-size: var(--t-small); color: var(--slate-500); }
 .more-reviews { margin: 40px 0 0; }
 
 /* Contact */
 .contact-list { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--slate-200); }
-.contact-list li { padding: 16px 0; border-bottom: 1px solid var(--slate-200); }
+.contact-list li { padding: 16px 0; font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--slate-200); }
 
 /* Opener: every page opens the same way. A big photo with its headline set large in the photo's
    own open space (sky, sea, open road), like a magazine cover line. No filters, nothing covering the
@@ -238,7 +238,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .hook { font-family: var(--font-display); font-size: var(--t-heading); line-height: 1.2; letter-spacing: -0.005em; max-width: 24em; margin: 0 0 0.7em; text-wrap: balance; color: var(--slate); }
 
 /* Footer: three even columns. Company | Pages | Contact */
-.site-footer { background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
+.site-footer { font-variant-numeric: tabular-nums; background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
 .site-footer a { color: var(--pearl); text-decoration: none; }
 .site-footer a:hover { color: #F9B6DC; }
 .site-footer .logo img { height: 52px; }
@@ -412,7 +412,7 @@ a.card:hover .card-photo:has(.pos-pillars) .card-hint, a.card:focus-visible .car
   --pink: #EC2193;
   --slate: #1D1E21;
   --quiet: #55575E;
-  --muted: #6E7075;
+  --muted: #55575E;
   --rule: #D9DADC;
   --line: rgba(29, 30, 33, 0.14);
   --pearl: #F9F9F9;
@@ -510,7 +510,7 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 }
 .home .roles { list-style: none; margin: -8px 0 0; padding: 0; max-width: 28em; }
 .home .roles li { position: relative; padding-left: 15px; margin-bottom: 6px; break-inside: avoid; }
-.home .roles li::before { content: ""; position: absolute; left: 0; top: .78em; width: 5px; height: 5px; border-radius: 50%; background: var(--pink); }
+.home .roles li::before { content: ""; position: absolute; left: 0; top: .78em; width: 5px; height: 5px; border-radius: 50%; background: var(--slate); }
 @media (max-width: 559px) {
   .home .roles { column-gap: 16px; }
 }
@@ -607,10 +607,8 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 @media (min-width: 760px) {
   .home .quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-.home .quotes figure { display: grid; gap: 18px; grid-template-rows: auto 1fr auto; border-top: 1px solid var(--line); padding-top: 28px; }
-.home .quotes figure::before { content: "“"; font-family: var(--serif); font-size: var(--t-display); line-height: .6; height: .4em; color: var(--pink); }
+.home .quotes figure { display: grid; gap: 18px; grid-template-rows: 1fr auto; border-top: 1px solid var(--line); padding-top: 28px; }
 .home .quotes blockquote { margin: 0; display: flex; flex-direction: column; }
-.home .quotes blockquote::after { content: "”"; display: block; text-align: right; font-family: var(--serif); font-size: var(--t-display); line-height: .6; height: .4em; margin-top: auto; padding-top: 14px; color: var(--pink); }
 .home .quotes mark { background: none; color: var(--slate); font-weight: 600; transition: color .3s; }
 @media (hover: hover) {
   .home .quotes figure:hover mark { color: var(--blue); }
@@ -620,7 +618,7 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .home .close { margin-top: var(--space); background: var(--blue); color: var(--white); }
 .home .close .wrap { padding-block: clamp(80px, 10vw, 136px); display: grid; gap: 36px; justify-items: start; }
 .home .close h2 { font-size: var(--t-display); max-width: 16em; text-wrap: balance; }
-.home .site-footer { background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
+.home .site-footer { font-variant-numeric: tabular-nums; background: var(--slate); color: #C9CACD; padding: 72px 0 56px; font-size: var(--t-small); }
 .home .site-footer a { color: var(--pearl); text-decoration: none; }
 .home .site-footer a:hover { color: #F9B6DC; }
 .home .site-footer .logo img { height: 52px; }
