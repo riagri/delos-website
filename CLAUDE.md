@@ -70,7 +70,7 @@ Website for Delos Recruitment Ltd (company number 16163283), a specialist rec2re
 2. **Hiring** (/hiring): clients. "How we work" in five steps, in Maria's words.
 3. **Careers** (/careers): people new to recruitment and experienced recruiters.
 4. **About** (/about): the business in "we" voice.
-5. **Contact** (/contact): client and candidate booking buttons, email, phone.
+5. **Contact** (/contact): client and candidate booking buttons, then "Or reach us however suits you." above quiet slate links (email, phone, WhatsApp; no labels or dividers).
 6. **Privacy notice** (/privacy): word for word from Maria's Lawspeed privacy-notice.pdf.
 
 - PageSpeed notes to ignore: "cache lifetimes" (GitHub Pages sets it), mobile "image delivery" (it ignores phone pixel density; smaller photos would look soft), "minify CSS" (2 KiB, not worth a build step), "forced reflow" (home.js measures only when the labyrinth story is opened).

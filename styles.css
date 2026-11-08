@@ -196,7 +196,8 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .more-reviews { margin: 40px 0 0; }
 
 /* Contact */
-.contact-list { list-style: none; padding: 0; margin: 44px 0 0; }
+.contact-lead { margin: 44px 0 0; }
+.contact-list { list-style: none; padding: 0; margin: 8px 0 0; }
 .contact-list a { color: var(--slate); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(29, 30, 33, 0.35); text-underline-offset: 4px; transition: color 200ms var(--ease), text-decoration-color 200ms var(--ease); } /* quiet fallback to the booking buttons */
 .contact-list a:hover { color: var(--delos-blue); text-decoration-color: var(--delos-blue); }
 .contact-list li { padding: 6px 0; font-variant-numeric: tabular-nums; }
