@@ -179,6 +179,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .reveal { font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); white-space: nowrap; padding-bottom: 4px; }
 .reveal::after { content: "+"; display: inline-block; font-size: 26px; line-height: 1; font-weight: 400; transition: transform 300ms var(--ease); }
 .myths details[open] .reveal::after { transform: rotate(45deg); }
+.myths details[open] .truth { animation: answer .25s ease-out both; }
 .oracle details[open] .truth::before { content: "The oracle says"; display: block; font-size: var(--t-small); font-weight: 500; color: var(--delos-blue); margin-bottom: 6px; } /* the oracle speaks only when asked */
 .truth { margin: -8px 0 0; padding: 0 0 28px; font-size: var(--t-body); line-height: 1.6; max-width: 38em; }
 .truth .label { color: var(--delos-blue); margin-bottom: 6px; }
@@ -266,7 +267,7 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  * { transition: none !important; animation: none !important; }
 }
 
 /* Motion (assets/js/motion.js). Headings wait hidden until the reveal starts. */
@@ -557,7 +558,7 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .home .myths details[open] .ask { color: var(--pink); }
 .home .myths details[open] .ask::after { transform: rotate(45deg); }
 .home .truth { padding: 4px 0 30px; max-width: 58ch; }
-.home .myths details[open] .truth { animation: answer .45s ease-out both; }
+.home .myths details[open] .truth { animation: answer .25s ease-out both; }
 @keyframes answer {from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; }}
 @media (max-width: 759px) {
   .home .myths summary { align-items: center; }
