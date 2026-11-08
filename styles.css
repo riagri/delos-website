@@ -196,8 +196,8 @@ a.card:hover /* Each card carries its page's headline on the photo, as the page 
 .more-reviews { margin: 40px 0 0; }
 
 /* Contact */
-.contact-list { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--slate-200); }
-.contact-list li { padding: 16px 0; font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--slate-200); }
+.contact-list { list-style: none; padding: 0; margin: 32px 0 0; }
+.contact-list li { padding: 6px 0; font-variant-numeric: tabular-nums; }
 
 /* Opener: every page opens the same way. A big photo with its headline set large in the photo's
    own open space (sky, sea, open road), like a magazine cover line. No filters, nothing covering the
