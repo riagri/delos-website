@@ -667,3 +667,14 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .home .split > * { grid-column: auto; max-width: none; } /* the shared question-list grid stays off Home's myths */
 #oracle { scroll-margin-top: 24px; } /* "Ask the oracle below." lands with the heading and questions in view */
 .card-photo:has(.pos-sisyphus) .card-hint { max-width: 11em; }
+
+/* Cookie choice: slate bar along the bottom, shown until the visitor chooses */
+.cookie-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 100; max-width: 960px; margin: 0 auto; padding: 24px 28px; border-radius: 4px; background: var(--slate); color: var(--pearl); font-size: var(--t-small); line-height: 1.5; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18); }
+.cookie-banner[hidden] { display: none; }
+.cookie-banner p { margin: 0; flex: 1 1 360px; }
+.cookie-banner a { color: var(--pearl); }
+.cookie-banner :focus-visible { outline-color: var(--pearl); }
+.cookie-actions { display: flex; gap: 12px; }
+.cookie-banner .btn { cursor: pointer; font-family: inherit; }
+.cookie-banner .cookie-decline { background: transparent; border-color: var(--pearl); color: var(--pearl); }
+.cookie-banner .cookie-decline:hover { background: rgba(249, 249, 249, 0.1); border-color: var(--pearl); box-shadow: none; }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Rec2Rec in Surrey, London and Manchester | Delos Recruitment</title>
   <meta name="description" content="Specialist recruitment to recruitment (Rec2Rec) agency in Surrey, hiring trainees, recruiters, sales, marketing, operations and administration across London, the Home Counties and Manchester.">
@@ -29,7 +29,7 @@
   <link rel="manifest" href="site.webmanifest?v=pink2">
   <link rel="preload" href="fonts/Gloock-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/KumbhSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=24">
   <script src="home.js?v=4" defer></script>
   <script type="application/ld+json">
 [
@@ -359,6 +359,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/privacy">Privacy notice</a></li>
+          <li><a href="/privacy#cookies" data-cookie-settings>Cookie settings</a></li>
         </ul>
       </div>
       <div>
@@ -377,5 +378,6 @@
       </div>
     </div>
   </footer>
+  <script src="assets/js/consent.js?v=1" defer></script>
 </body>
 </html>
