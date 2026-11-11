@@ -284,11 +284,11 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Legal pages */
 .legal h2 { font-size: var(--t-heading); margin-top: 1.6em; }
-.legal h3 { font-size: var(--t-body); font-family: var(--font-body); font-weight: 600; color: var(--slate); margin-top: 2em; margin-bottom: 0.5em; }
+.legal h3 { font-size: var(--t-body); font-family: var(--font-body); font-weight: 600; line-height: 1.4; color: var(--slate); margin-top: 2em; margin-bottom: 0.5em; }
 .legal h4 { font-size: var(--t-body); font-family: var(--font-body); font-weight: 600; color: var(--slate); line-height: 1.4; margin: 1.6em 0 0.4em; padding-left: 14px; border-left: 3px solid var(--delos-blue); }
 .legal h2 { line-height: 1.2; letter-spacing: 0; margin-top: 3em; }
 .legal p { margin-bottom: 1.1em; }
-.legal li { line-height: 1.55; }
+.legal li { line-height: 1.6; }
 .legal ul { padding-left: 1.2em; margin: 0 0 1em; }
 .legal li { margin-bottom: 0.35em; }
 .legal li ul { margin-top: 0.35em; }
