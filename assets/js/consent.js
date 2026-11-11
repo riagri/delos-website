@@ -50,7 +50,7 @@
       banner.setAttribute('role', 'region');
       banner.setAttribute('aria-label', 'Cookie choice');
       banner.innerHTML =
-        '<p>We\'d like to use Google Analytics cookies to see how people use this site, so we can improve it. Nothing is set unless you accept. You can change your choice at any time using Cookie settings at the bottom of any page. <a href="/privacy#cookies">Privacy notice</a></p>' +
+        '<p>We\'d like to use Google Analytics cookies to see how people use this site, so we can improve it. Nothing is set unless you accept. You can change your choice at any time in our <a href="/privacy#cookies">Privacy notice</a>.</p>' +
         '<div class="cookie-actions">' +
         '<button type="button" class="btn light" data-choice="granted">Accept</button>' +
         '<button type="button" class="btn light" data-choice="denied">Reject</button>' +
