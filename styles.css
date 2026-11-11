@@ -676,5 +676,3 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .cookie-banner :focus-visible { outline-color: var(--pearl); }
 .cookie-actions { display: flex; gap: 12px; }
 .cookie-banner .btn { cursor: pointer; font-family: inherit; }
-.cookie-banner .cookie-decline { background: transparent; border-color: var(--pearl); color: var(--pearl); }
-.cookie-banner .cookie-decline:hover { background: rgba(249, 249, 249, 0.1); border-color: var(--pearl); box-shadow: none; }

@@ -4,11 +4,18 @@
   var KEY = 'delos-cookies';
   var banner;
 
+  var SIX_MONTHS = 183 * 24 * 60 * 60 * 1000;
+
+  /* The choice is kept for six months, then we ask again (ICO guidance). */
   function getChoice() {
-    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    try {
+      var parts = (localStorage.getItem(KEY) || '').split('|');
+      if (!parts[0] || Date.now() - Number(parts[1]) > SIX_MONTHS) return null;
+      return parts[0];
+    } catch (e) { return null; }
   }
   function setChoice(v) {
-    try { localStorage.setItem(KEY, v); } catch (e) {}
+    try { localStorage.setItem(KEY, v + '|' + Date.now()); } catch (e) {}
   }
 
   function loadAnalytics() {
@@ -43,10 +50,10 @@
       banner.setAttribute('role', 'region');
       banner.setAttribute('aria-label', 'Cookie choice');
       banner.innerHTML =
-        '<p>We\'d like to use Google Analytics cookies to see how people use this site, so we can improve it. Nothing is set unless you accept. <a href="/privacy">Privacy notice</a></p>' +
+        '<p>We\'d like to use Google Analytics cookies to see how people use this site, so we can improve it. Nothing is set unless you accept. You can change your choice at any time using Cookie settings at the bottom of any page. <a href="/privacy#cookies">Privacy notice</a></p>' +
         '<div class="cookie-actions">' +
         '<button type="button" class="btn light" data-choice="granted">Accept</button>' +
-        '<button type="button" class="btn cookie-decline" data-choice="denied">Decline</button>' +
+        '<button type="button" class="btn light" data-choice="denied">Reject</button>' +
         '</div>';
       banner.addEventListener('click', function (e) {
         var choice = e.target.getAttribute('data-choice');
