@@ -535,6 +535,8 @@ body.home { margin: 0; background: var(--pearl); color: var(--slate); font: 400 
 .home .hero .lore p { padding: 14px 0 34px; max-width: min(60ch, calc(100% - 140px)); }
 @media (min-width: 960px) {
   .home .hero .lore[open] p { position: absolute; left: 0; top: 100%; }
+  .home .hero .spread { transition: margin-bottom .3s; }
+  .home .hero:has(.lore[open]) .spread { margin-bottom: 150px; } /* room for the opened story, which the hero would otherwise clip */
 }
 .home .clew { width: 0; height: 20px; margin-right: 6px; overflow: visible; visibility: hidden; }
 .home .guide { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; z-index: 2; }
