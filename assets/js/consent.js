@@ -22,6 +22,7 @@
     if (window.gtag) return;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { dataLayer.push(arguments); };
+    gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
     gtag('js', new Date());
     gtag('config', GA_ID);
     var s = document.createElement('script');
@@ -50,7 +51,7 @@
       banner.setAttribute('role', 'region');
       banner.setAttribute('aria-label', 'Cookie choice');
       banner.innerHTML =
-        '<p>We\'d like to use Google Analytics cookies to see how people use this site, so we can improve it. Nothing is set unless you accept. You can change your choice at any time in our <a href="/privacy#cookies">Privacy notice</a>.</p>' +
+        '<p>We use Google Analytics cookies to improve this site, but only if you accept. <a href="/privacy#cookies">Change your choice</a> any time.</p>' +
         '<div class="cookie-actions">' +
         '<button type="button" class="btn light" data-choice="granted">Accept</button>' +
         '<button type="button" class="btn light" data-choice="denied">Reject</button>' +
